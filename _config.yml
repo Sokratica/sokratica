@@ -3,8 +3,6 @@ author_name: "Sokratica"
 description: Maestro en Filosofía de la Ciencia
 url:
 
-theme: dev-portfolio-blog
-
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
