@@ -10,7 +10,7 @@ permalink: /cv/
 
 ---
 
-### Información Académica <img style="float: right" alt="no disponible" src="/assets/img/unam.png" height="50" width="55">
+### Información Académica <img style="float: right" alt="no disponible" src="../assets/img/unam.png" height="50" width="55">
 
 + > **Maestría** en Filosofía de la Ciencia
 
@@ -47,7 +47,7 @@ permalink: /cv/
 
 ### Aptitudes Generales
 
-*Habilidades* <img style="float: right;" alt="no disponible" src="/assets/img/latex.png" height="40" width="60">
+*Habilidades* <img style="float: right;" alt="no disponible" src="./assets/img/latex.png" height="40" width="60">
 
 + > **Excel** Nivel Medio.
 
