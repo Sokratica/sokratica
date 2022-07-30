@@ -29,3 +29,5 @@ Esta es una web personal que se irá construyendo de a poco con cuatro objetivos
 <nav id="social">
 {% include share_buttons.html %}
 </nav>
+
+{% include footer.html %}

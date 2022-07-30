@@ -7,7 +7,7 @@ layout: description
 
 <div class="post-footer">
 <div class="post-categories">
-  Categories :
+  Categorías :
   {% if post %}
     {% assign categories = post.categories %}
   {% else %}
@@ -21,7 +21,3 @@ layout: description
 <div>{% include share_buttons.html %}</div>
 
 </div>
-{% if site.disqus.shortname and page.comments %}
-  <hr>
-  {% include disqus_comments.html %}
-{% endif %}

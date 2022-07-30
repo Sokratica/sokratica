@@ -94,3 +94,9 @@ permalink: /cv/
 <br>
 
 + > Grupo Miura. Analista de inteligencia: investigación de siniestros, elaboración de reportes y presentación de evidencia, correlación de hechos y reconstrucción de siniestros desde septiembre de 2021 a la actualidad.
+
+---
+
+---
+
+{% include footer.html %}
