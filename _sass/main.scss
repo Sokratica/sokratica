@@ -26,7 +26,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #f00000 url('../assets/img/backg.png') top right no-repeat;
+  background: #000000 url('../../assets/img/backg.png') top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
