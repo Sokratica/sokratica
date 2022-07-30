@@ -21,7 +21,7 @@ body {
   color: var(--primary-text-color);
   transition: background 0.1s ease-in, color 0.1s ease-in;
   opacity: 0.98;
-  // font-size: 120%;
+  font-size: 120%;
 }
 body::before {
   content: "";
