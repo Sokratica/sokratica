@@ -26,11 +26,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-<<<<<<< HEAD
   background: #040404 url("../assets/img/backg.png") top right no-repeat;
-=======
-  background: #040404 url("assets/img/backg.png") top right no-repeat;
->>>>>>> 4b6c3fbcb6362c258ebf01a1b84c822eec55a9de
   background-size: cover;
   left: 0;
   right: 0;
