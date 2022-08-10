@@ -4,7 +4,11 @@ title: CV
 permalink: /cv/
 ---
 
-<button type="button" class="btn btn-outline-primary" href="https://github.com/Sokratica/sokratica/blob/master/excv.pdf">Descargar</button>
+<body>
+    <form action="https://github.com/Sokratica/sokratica/blob/master/excv.pdf" method="get" target="_blank">
+        <button type="submit">Descargar</button>
+    </form>
+</body>
 
 # CV
 
