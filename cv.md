@@ -4,7 +4,7 @@ title: CV
 permalink: /cv/
 ---
 
-<button type="button" class="btn btn-outline-primary" href="{{ site.resume_url | relative_url }}">Descargar</button>
+<button type="button" class="btn btn-outline-primary" href="https://github.com/Sokratica/sokratica/blob/master/excv.pdf">Descargar</button>
 
 # CV
 
