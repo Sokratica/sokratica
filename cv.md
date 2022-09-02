@@ -18,7 +18,7 @@ permalink: /cv/
 
 ### Presentación
 
-Licenciado en Economía y maestro en Filosofía de la Ciencia. Especializado en cuestiones de inteligencia, seguridad, delitos de cuellos blanco y fraudes. Mis estudios complementan mi especialización bajo cuestiones sobre finanzas y metodología de la investigación. Adentrándome en el mundo de la informática para complementar mi perfil hacia la ciber-seguridad.
+Licenciado en Economía y maestro en Filosofía de la Ciencia. Especializado en cuestiones de inteligencia, seguridad, delitos de cuello blanco y fraudes. Mis estudios complementan mi especialización bajo cuestiones sobre finanzas y metodología de la investigación. Adentrándome en el mundo de la informática para complementar mi perfil hacia la ciber-seguridad.
 
 También me encuentro aprendiendo nuevas técnicas y tecnologías de osint para complementar las investigaciones en los campos: financieros, crediticios, fiscales, de comunicaciones y fuentes abiertas.
 
