@@ -18,9 +18,7 @@ permalink: /cv/
 
 ### Presentación
 
-Licenciado en Economía y maestro en Filosofía de la Ciencia. Especializado en cuestiones de inteligencia, seguridad, delitos de cuello blanco y fraudes. Mis estudios complementan mi especialización bajo cuestiones sobre finanzas y metodología de la investigación. Adentrándome en el mundo de la informática para complementar mi perfil hacia la ciber-seguridad.
-
-También me encuentro aprendiendo nuevas técnicas y tecnologías de osint para complementar las investigaciones en los campos: financieros, crediticios, fiscales, de comunicaciones y fuentes abiertas.
+Licenciado en Economía y maestro en Filosofía de la Ciencia. Especializado en análisis de  inteligencia: seguridad, delitos de cuello blanco y fraudes. Mis estudios complementan mi especialización en cuestiones sobre finanzas y metodología de la investigación. Actualmente estoy virando mi perfil profesional hacia la ciber-seguridad. Sin embargo, he descubierto mi pasión en el mundo de la informática y programación; mis objetivos a corto plazo, además de adentrarme en la ciber-seguridad, es introducirme de lleno en el desarrollo web. La diversidad de mi formación académica y profesional representa mi actitud personal: el auto aprendizaje y ser autodidacta es lo que me define.
 
 ---
 
@@ -36,6 +34,23 @@ También me encuentro aprendiendo nuevas técnicas y tecnologías de osint para 
     + Ejecutivo de cobranza de marzo de 2021 a julio de 2021: 4 meses.
 
 + > Tendencias Consultores en Economía, S.C. Analista de proyectos de inversión en el sector rural. De marzo de 2018 a septiembre de 2018: 7 meses.
+
+---
+
+<br>
+
+### Idiomas y Cursos
+
++ > **Inglés** Nivel medio. Competencia principal: lectura. Certificación de comprensión lectora por la Escuela Nacional de Lenguas, Lingüística y Traducción (ENALLT), UNAM.
+
++ > **Francés** Nivel medio. Competencia principal: lectura. Certificación de comprensión lectora por la Escuela Nacional de Lenguas, Lingüística y Traducción (ENALLT), UNAM.
+
+**Cursos**
+
++ Python, nivel begginer-intermedio.
++ C.
++ Github y git.
++ Google Garage Digital: "Conceptos básicos de marketing digital" (en proceso).
 
 ---
 
@@ -64,6 +79,14 @@ También me encuentro aprendiendo nuevas técnicas y tecnologías de osint para 
 
 <br>
 
++ > **Licenciatura** en Tecnologías de la Información y Comunicaciónes
+
+    Instituto Rosario Castellanos.
+    Modalidad a distancia.
+    Iniciando.
+
+<br>
+
 + > **Licenciatura** en Filosofía
 
     Universidad Nacional Autónoma de México. Facultad de Filosofía y Letras.
@@ -74,15 +97,6 @@ También me encuentro aprendiendo nuevas técnicas y tecnologías de osint para 
 
 ---
 
-<br>
-
-### Idiomas
-
-+ > **Inglés** Nivel medio. Competencia principal: lectura. Certificación de comprensión lectora por la Escuela Nacional de Lenguas, Lingüística y Traducción (ENALLT), UNAM.
-
-+ > **Francés** Nivel medio. Competencia principal: lectura. Certificación de comprensión lectora por la Escuela Nacional de Lenguas, Lingüística y Traducción (ENALLT), UNAM.
-
----
 
 <br>
 
@@ -107,18 +121,6 @@ También me encuentro aprendiendo nuevas técnicas y tecnologías de osint para 
 + > **Asistente personal** de la Dra. Monika Meireles en el proyecto de investigación PAPIIT "Financiarización, sector bancario y desarrollo: Tendencias y perspectivas". Apoyo en la coordinación de los becarios y servicios social del proyecto en el Instituto de Investigaciones Económicas - UNAM de 2016 a 2017.
 
 + > **Becario** en el proyecto de investigación PAPIIT "Trascendencia del gasto público en la incorporación de las mujeres al mercado laboral. Trabajo de cuidado y reproducción en América Latina" con la Dra. María Luisa González Marín y la Mtra. Patricia Rodríguez López en el Instituto de Investigaciones Económicas, UNAM de 2018 a 2019.
-
----
-
-<br>
-
-### Otros / Cursos
-
-A nivel *beginner* en Mastermind.ac:
-
-+ Python.
-+ C.
-+ Github y git.
 
 ---
 
