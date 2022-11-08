@@ -5,8 +5,11 @@ permalink: /cv/
 ---
 
 <body>
-    <form action="https://github.com/Sokratica/sokratica/blob/master/excv.pdf" method="get" target="_blank">
-        <button type="submit">Descargar</button>
+    <form action="https://github.com/Sokratica/sokratica/blob/master/ol_escvless.pdf" method="get" target="_blank">
+        <button type="submit">Descarga Español</button>
+    </form>
+    <form action="https://github.com/Sokratica/sokratica/blob/master/ol_encv.pdf" method="get" target="_blank">
+        <button type="submit">Download English</button>
     </form>
 </body>
 
