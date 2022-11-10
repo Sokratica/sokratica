@@ -5,10 +5,10 @@ permalink: /cv/
 ---
 
 <body>
-    <form action="https://github.com/Sokratica/sokratica/blob/master/ol_escvless.pdf" method="get" target="_blank">
+    <form action="https://drive.google.com/file/d/1KhEQly2EsgLU8k-MGbQDrogD6yJKBuz6/view?usp=sharing" method="get" target="_blank">
         <button type="submit">Descarga Español</button>
     </form>
-    <form action="https://github.com/Sokratica/sokratica/blob/master/ol_encv.pdf" method="get" target="_blank">
+    <form action="https://drive.google.com/file/d/1DEarHSb625jvAQTw_dD-A1gdRPoCHzI9/view?usp=sharing" method="get" target="_blank">
         <button type="submit">Download English</button>
     </form>
 </body>
@@ -53,7 +53,7 @@ Licenciado en Economía y maestro en Filosofía de la Ciencia. Especializado en 
 + Python, nivel begginer-intermedio.
 + C.
 + Github y git.
-+ Google Garage Digital: "Conceptos básicos de marketing digital" (en proceso).
++ Google Garage Digital: "Conceptos básicos de marketing digital" [Certificado](https://drive.google.com/file/d/160TENCxO3w-G33CiYrovoVA0sjoPgJOt/view?usp=sharing).
 
 ---
 
