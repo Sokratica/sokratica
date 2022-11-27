@@ -97,8 +97,9 @@ table, th, td {
 |------|-----------|------|-----|
 |PuTTY|59/70|1.47 mb|2022-11-10 06:43:21 UTC11 days ago|
 
-![sillyputty1](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/sp1.png)
-![sillyputty2](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/sp2.png)
+![sillyputty1](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/sp1.png?raw=true)
+![sillyputty2](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/sp2.png?raw=true)
+
 
 ## Strings
 
@@ -106,7 +107,7 @@ table, th, td {
 
 **Se encontró un comando oneliner haciendo una llamada a la powershell:**
 
-![sillyputtyoneliner](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/sponeliner.png)
+![sillyputtyoneliner](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/sponeliner.png?raw=true)
 
 En una búsqueda en fuentes abiertas se encontró que este comando para la powershell está embebido en un payload de Metasploit usado para invocar una reverse shell, aprovechándose de las vulnerabilidades del SO.
 
@@ -162,7 +163,7 @@ Bajo el mismo contexto, estas librerías no parecen particularmente sospechosas.
 - Se abre una powershell.
 - Sale una pantalla de conexión para enlazarse a la ip o host que indiques.
 
-![sillyputty3](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/sp3.png)
+![sillyputty3](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/sp3.png?raw=true)
 
 
 ### Procmon
@@ -170,23 +171,23 @@ Bajo el mismo contexto, estas librerías no parecen particularmente sospechosas.
 - El análisis del procmon revela que, tras la ejecución del putty.exe, aparece una powershell como proceso hijo del malware.
 - Asimismo, en la información de la powershell se puede ver el oneliner que es un payload malicioso.
 
-![sillyputty.4](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/sp4.png)
+![sillyputty.4](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/sp4.png?raw=true)
 
 El onliner indica que está codificando en base64 un comando. El decodificar el código se puede ver lo siguiente:
 
-![sillyputty5](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/sp5.png)
+![sillyputty5](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/sp5.png?raw=true)
 
 
 El método de decodificación se hizo en la máquina remnux mediante la siguiente serie de comandos:
 
-![sillyputtydecode](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/spdecode.png)
+![sillyputtydecode](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/spdecode.png?raw=true)
 
 
 ### Wireshark
 
 La captura del tráfico encontró que la powershell manda una petición DNS a "bonus2.corporatebonusapplication.local"
 
-![sillyputty6](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/sp6.png)
+![sillyputty6](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/sp6.png?raw=true)
 
 al bonus2.corporatebonusapplication.local. Y actualizamos con el comando:
 
@@ -197,13 +198,13 @@ ipconfig /flushdns
 Reiniciamos el wireshark en el canal: Ncap Loopback...
 Vemos que recebimos el saludo de vuelta del puerto 8443.
 
-![sillyputty7](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/sp7.png)
+![sillyputty7](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/sp7.png?raw=true)
 
 ### Ncat
 
 Finalmente, con ncat tratamos de capturar la información transmitida de vuelta por https y vemos que nos regresa información. Aunque no se puede interpretar y no podemos ejecutar comandos, debido a que no hemos podido completar el protocolo https, todo sugiere que se trata de una rever shell.
 
-![sillyputty8](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/sp8.png)
+![sillyputty8](https://github.com/Sokratica/sokratica/blob/master/assets/img/masp/sp8.png?raw=true)
 
 ---
 ---
