@@ -59,7 +59,7 @@ table, th, td {
 
 Asimismo, el floss reveló mmás información relavante sobre la ejecución del binario:
 
-![malware dropper1](https://github.com/Sokratica/sokratica/blob/081fef0da1133295dab42087b25f89845583a21a/assets/img/malandrop/img1.png?raw=true)
+![malware dropper1](https://github.com/Sokratica/sokratica/blob/master/assets/img/malandrop/img1.png?raw=true)
 
 
 
