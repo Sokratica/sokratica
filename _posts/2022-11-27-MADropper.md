@@ -59,7 +59,9 @@ table, th, td {
 
 Asimismo, el floss reveló mmás información relavante sobre la ejecución del binario:
 
-![malware dropper1](/assets/img/malandrop/img1.png)
+![malware dropper1](https://github.com/Sokratica/sokratica/blob/081fef0da1133295dab42087b25f89845583a21a/assets/img/malandrop/img1.png)
+
+
 
 - 1. Abre una consola y lanza una traza para verificar la conexión a internet. La flag "/C" indica que es un proceso que se abre desde consola, ejecuta la string como comando y luego termina. La parte del comando __Nul & Del /f /q "%s"__ indica que una parte del proceso fuerza el borrado de fichero en modo silencioso se lo que sea que haya sido introducido como string.
 - 2. hay una petición http a una dirección en concreto pidiendo un recurso "favicon.ico".
