@@ -130,7 +130,7 @@ assets:
   # url: the CDN url (fqdn, or w/ identifier).
   # --
   cdn:
-    baseurl: false
+    baseurl:
     destination: false
     url: null
   # --

@@ -2,7 +2,7 @@
 layout: post
 comments: false
 title : Análisis de Malware | SillyPutty
-categories: [Analisis de Malware]
+categories: [Análisis de Malware]
 tags: Análisis de Malware, TCM Security Academy, Reto 1, Análisis Estático, Análisis Dinámico, Reverse Shell
 excerpt: "Malware: SillyPutty. Este es el primer reto, a nivel básico, propuesto en el curso de __Malware Analysis & Triage__ (Análisis de malware y protocolos de intervención)."
 ---
