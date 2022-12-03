@@ -40,7 +40,7 @@ De manera general, un simple archivo Office contiene un montón de otros archivo
 
 Si descomprimimos el excel del ejemplo podremos ver que dentro tiene lo siguiente:
 
-![offMal1](https://github.com/Sokratica/sokratica/blob/master/assets/img/offMal/img1?raw=true)
+![offMal1](https://github.com/Sokratica/sokratica/blob/master/assets/img/offMal/img1.png?raw=true)
 
 
 
@@ -50,17 +50,17 @@ De primeras, para el analista de malware podría saltarle a la vista que dentro 
 
 Analizando el contenido de este fichero, con la herramienta oledump[^1], se puede ver que ésta detectó la presencia de una macro[^2] la cual, siendo paranoico, el analista podría pensar que es una macro maliciosa:
 
-![offMal2](https://github.com/Sokratica/sokratica/blob/master/assets/img/offMal/img2?raw=true)
+![offMal2](https://github.com/Sokratica/sokratica/blob/master/assets/img/offMal/img2.png?raw=true)
 
 Para determinar el riesgo de esa macro, mostramos su contenido. Normalmente, lo que encontraremos son un montón de strings contenidas dentro del ".bin". A simple vista, algunas podrían llamarnos la atención, aunque esto podría varias dependiendo de qué tan ofuscada o no podría estar la macro. En este ejemplo se pueden ver algunas cosas interesantes:
 
-![offMal3](https://github.com/Sokratica/sokratica/blob/master/assets/img/offMal/img3?raw=true)
+![offMal3](https://github.com/Sokratica/sokratica/blob/master/assets/img/offMal/img3.png?raw=true)
 
-![offMal4](https://github.com/Sokratica/sokratica/blob/master/assets/img/offMal/img4?raw=true)
+![offMal4](https://github.com/Sokratica/sokratica/blob/master/assets/img/offMal/img4.png?raw=true)
 
 Intentemos recuperar la sintaxis de la macro para ver si podemos visualizar con más claridad lo que esta macro puede hacer:
 
-![offMal5](https://github.com/Sokratica/sokratica/blob/master/assets/img/offMal/img5?raw=true)
+![offMal5](https://github.com/Sokratica/sokratica/blob/master/assets/img/offMal/img5.png?raw=true)
 
 Parece ser que la macro embebida dentro del documento xlsm analizado tiene la capacidad de hacer lo siguiente:
 
