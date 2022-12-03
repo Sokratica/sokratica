@@ -40,7 +40,9 @@ De manera general, un simple archivo Office contiene un montón de otros archivo
 
 Si descomprimimos el excel del ejemplo podremos ver que dentro tiene lo siguiente:
 
-![Alt text](../assets/img/offMal/img1.png)
+![offMal1](https://github.com/Sokratica/sokratica/blob/master/assets/img/offMal/img1?raw=true)
+
+
 
 De primeras, para el analista de malware podría saltarle a la vista que dentro hay un fichero ".bin", el cual indica que hay un binario embebido en el excel.
 
@@ -48,17 +50,17 @@ De primeras, para el analista de malware podría saltarle a la vista que dentro 
 
 Analizando el contenido de este fichero, con la herramienta oledump[^1], se puede ver que ésta detectó la presencia de una macro[^2] la cual, siendo paranoico, el analista podría pensar que es una macro maliciosa:
 
-![Alt text](../assets/img/offMal/img2.png)
+![offMal2](https://github.com/Sokratica/sokratica/blob/master/assets/img/offMal/img2?raw=true)
 
 Para determinar el riesgo de esa macro, mostramos su contenido. Normalmente, lo que encontraremos son un montón de strings contenidas dentro del ".bin". A simple vista, algunas podrían llamarnos la atención, aunque esto podría varias dependiendo de qué tan ofuscada o no podría estar la macro. En este ejemplo se pueden ver algunas cosas interesantes:
 
-![Alt text](../assets/img/offMal/img3.png)
+![offMal3](https://github.com/Sokratica/sokratica/blob/master/assets/img/offMal/img3?raw=true)
 
-![Alt text](../assets/img/offMal/img4.png)
+![offMal4](https://github.com/Sokratica/sokratica/blob/master/assets/img/offMal/img4?raw=true)
 
 Intentemos recuperar la sintaxis de la macro para ver si podemos visualizar con más claridad lo que esta macro puede hacer:
 
-![Alt text](../assets/img/offMal/img5.png)
+![offMal5](https://github.com/Sokratica/sokratica/blob/master/assets/img/offMal/img5?raw=true)
 
 Parece ser que la macro embebida dentro del documento xlsm analizado tiene la capacidad de hacer lo siguiente:
 
@@ -71,8 +73,6 @@ Parece ser que la macro embebida dentro del documento xlsm analizado tiene la ca
 
 Al margen de lo que este archivo xlsm pueda hacer, la macro embebida implica un riesgo si se abre de manera descuidada.
 Por otra parte, por la descripción del análisis realizado, podría parecer que solamente con tener en cuenta si la extensión del documento ofimático que querramos abrir contiene la letra "m" en su nombre, lo cual sería un indicativo de que contiene una macro, sería suficiente para descartar cualquier riesgo. Sin embargo, algunos documentos ofimáticos que no tienen explícitamente este indicativo también podrían o contener macros o script potencialmente maliciosos.
-
-?raw=true
 
 ---
 [^1]: OLE significa "Object Linking & Embedding" el cual es un protocolo desarrollado por Microsoft. Este protocolo, básicamente, permite que las aplicaciones de los diferentes docuementos Office tengan una interacción enriquecida como arrastrar tablas de excel a un documento word. Para saber más: https://es.wikipedia.org/wiki/Object_Linking_and_Embedding
