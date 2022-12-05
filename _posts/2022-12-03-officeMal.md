@@ -1,10 +1,10 @@
 ---
 layout: post
 comments: false
-title : Análisis de Malware | Documentos Ofimáticos Maliciosos
+title : Análisis de Malware | Documentos Ofimáticos Maliciosos (Maldocs)
 categories: [Análisis de Malware]
 tags: Análisis de Malware, TCM Security Academy, Análisis Estático, Documentos Ofimáticos, Excel
-excerpt: "Excel malicioso: Este es un ejemplo que un documento ofimático malicioso, excel, sobre el cual se hace un análsis estático con la herramienta oledump."
+excerpt: "Excel y Word maliciosos: este es un ejemplo de un par de documentos ofimáticos maliciosos, excel y word, sobre los cuales se hace un análsis estático con la herramienta oledump."
 ---
 
 # TCM Security Academy
@@ -15,8 +15,10 @@ excerpt: "Excel malicioso: Este es un ejemplo que un documento ofimático malici
 
 # Índice
 
-1. [Contenido del xlsm](#xlsm)
-2. [Contenido del .bin](#bin)
+1. [Maldocs: Excel](#excel)
+    1. [Contenido del xlsm](#xlsm)
+    2. [Contenido del .bin](#bin)
+2. [Maldocs: Word](#word)
 3. [Conclusiones](#conclusiones)
 
 ---
@@ -28,9 +30,11 @@ Análisis estático:
 
 ---
 
-# Análisis estático
+# Maldoc: Excel <a name="excel"></a>
 
-## Contenido del xlsm <a name="xlsm"></a>
+## Análisis estático
+
+### Contenido del xlsm <a name="xlsm"></a>
 
 Imagínate la siguiente situación: eres la persona a cargo de la facturación de tu empresa y recibes un correo de un supuesto cliente en el que te manda un archivo excel adjunto en el cual, según te escribe, están los montos correspondientes a las compras del mes. Descargas el archivo, das doble click para abrirlo y desactivas las medidas de seguridad del Office para que puedas manipular el documento. En ese momento, estás permitiendo que las macros embebidas en el documento hagan su trabajo.
 
@@ -68,6 +72,40 @@ Parece ser que la macro embebida dentro del documento xlsm analizado tiene la ca
 2. Luego hace una petición http por el método GET por el recurso "abc123.crt" a "http://srv3.wonderballfinancial.local/abc123.crt".
 3. El cual es guardado como "encd.crt".
 4. Después, mediante el emulador de comandos y la utilidad certutil, decodifica el fichero recién guardado y el contenido lo mete a un fichero que nombre "run.ps1" el cual lee desde una PowerShell en modo oculto.
+
+# Maldocs: Word <a name="word"></a>
+
+## Análisis Estático
+
+Algunos podrán pensar que con verificar que en la extensión no esté especificado que haya una macro (la "m" en la extensión) sería sufciente para poder abrir un documento ofimático de manera segura. Sin embargo, no es el caso; en esta sección trataremos de mostrar que podría haber un gran riesgo al abrir un documento Word sin macros.
+
+### Documento .docm
+
+Al igual que con el ejemplo del excel, en la extensión del documento aparece la señal de la "m". Inspeccionando el documento con el oledump vemos lo mismo (esto es una prueba de concepto).
+
+![offMal6](https://github.com/Sokratica/sokratica/blob/master/assets/img/offMal/img6.png?raw=true)
+
+Con este ejemplo era obvio que habría una macro maliciosa. Pero lo que queremos probar es que, incluso sin tener la "m" en la extensión podría haber algo malicioso corriendo por detrás.
+
+### Documento .docx
+
+El archivo docx que analizaremos es el llamado "incrediblyPolishedResume.docx". El truco es el mismo, podemos tratar el archivo como un directorio para ver el contenido del documento.
+
+![offMal7](https://github.com/Sokratica/sokratica/blob/master/assets/img/offMal/img7.png?raw=true)
+
+Descomprimiendo el fichero "test.zip", podemos ver los siguiente:
+
+![offMal8](https://github.com/Sokratica/sokratica/blob/master/assets/img/offMal/img8.png?raw=true)
+
+El fichero en la ruta "word/_rels/settings.xml.rels" es el que nos interesa. En este fichero se establece la configuración del template del documento Word que estás usando. Lo que hace el programa Word es descargar un template y lo almacena en el sistema de ficheros en algún lugar del host. Usualmente es en el directorio llamado "custom word templates".
+
+Dentro del fichero de configuración hay una variable "target" donde el programa almacena dicho template. Sin embargo, en esta variable se puede meter una url desde donde se descargue cualquier cosa a la que apunte:
+
+![offMal9](https://github.com/Sokratica/sokratica/blob/master/assets/img/offMal/img9.png?raw=true)
+
+En este caso, la url apunta al recurso "macro3.dotm" el cual es un "document template file" y si este fichero que se descarga tiene una macro embedida, cuando abras tu archivo word se descargará, almacenará y ejecutará.
+
+En estricto sentido, un "docx" no tiene una macro embedida, pero no significa que no sea un riesgo abrir el documento sin medidas de seguridad.
 
 # Conclusiones <a name="conclusiones"></a>
 
