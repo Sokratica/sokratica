@@ -1,5 +1,5 @@
 ---
 layout: home
-home_text: Maestro en Filosofía de la Ciencia
+home_text: Análisis de Malware - OSINT - DFIR | Writeups y Herramientas
 title: Sokratica
 ---

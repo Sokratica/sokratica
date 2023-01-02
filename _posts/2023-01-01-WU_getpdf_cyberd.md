@@ -68,6 +68,8 @@ El formato PDF es el estándar, *de facto*, en el intercambio de documentos en l
 
 Vamos a resolver el reto getpdf de la plataforma cyberdefenders.org, paso a paso, de las preguntas 1 a la 9. Todas están ya respondidas, pero sólo habrá detalles para las preguntas especificadas.
 
+Si tienes dudas, ya sabes que me puedes contactar en mi Twitter.
+
 ---
 
 # WriteUp <a name="wu"> </a>

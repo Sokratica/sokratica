@@ -9,22 +9,17 @@ permalink: /about/
 Esta es una web personal que se irá construyendo de a poco con cuatro objetivos en mente:
 
 + Publicar sobre temas variados que podrían ser de interés
-  + **Publicaciones**
+  + **Blog/Noticias**
 
 <br>
 
 + Publicar proyectos que haya realizado
-  + **Proyectos**
+  + **Blog/Herramientas**
 
 <br>
 
-+ Hacer resúmenes / tutoriales de cómo voy resolviendo mis tareas escolares
-  + **Academia**
-
-<br>
-
-+ Publicar mi carrera académica y profesional
-  + **CV**
++ Hacer resúmenes / tutoriales de cómo voy resolviendo mis tareas escolares y writeups de retos de cuberseguridad
+  + **Blog/Writeups**
 
 <nav id="social">
 {% include share_buttons.html %}
