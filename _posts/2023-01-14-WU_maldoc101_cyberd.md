@@ -83,7 +83,7 @@ oledump.py sample.bin.malz
 
 Lo que nos arroja la herramienta es lo siguiente:
 
-![[WriteUps/CyberDefenders/MalDoc101/imgs/img1.png]]
+![mald1](https://github.com/Sokratica/sokratica/blob/master/assets/img/maldoc101/img1.png?raw=true)
 
 - Como primer indicador de potencial riesgo son aquellos objetos que tienen una "M/m" inmediatamente después del índice asociado. Esta letra describe una propiedad del objeto señalado que, en este caso, se trata de un objeto que es una macro. 
 
@@ -99,8 +99,7 @@ Ejecutamos la herramienta sobre nuestro binario malicioso. El output es una locu
 ```
 olevba.py sample.bin.malz
 ```
-
-![[WriteUps/CyberDefenders/MalDoc101/imgs/img2.png]]
+![mald2](https://github.com/Sokratica/sokratica/blob/master/assets/img/maldoc101/img2.png?raw=true)
 
 - La respuesta a la pregunta ye la señalo en un recuadro rojo. Sin embargo, hay otras cosas interesantes que señalar.
 
@@ -118,7 +117,7 @@ End Sub
 
 - Con esta información adicional podemos afirmar que el lo que está tratando de abrir el binario es un objeto llamado "boaxvoebxiotqueb":
 
-![[WriteUps/CyberDefenders/MalDoc101/imgs/img3.png]]
+![mald3](https://github.com/Sokratica/sokratica/blob/master/assets/img/maldoc101/img3.png?raw=true)
 
 **Nota: no agregues los paréntesis en la respuesta.**
 
@@ -131,12 +130,11 @@ Para este paso lo que hice fue sacar el hash del binario, subirlo a Virustotal y
 ```
 shasum sample.bin.mlz
 ```
-
-![[WriteUps/CyberDefenders/MalDoc101/imgs/img4.png]]
+![mald4](https://github.com/Sokratica/sokratica/blob/master/assets/img/maldoc101/img4.png?raw=true)
 
 - Para nuestra buena suerte, ya se había identificado previamente este malware por lo que hay bastante información sobre él.
 
-![[WriteUps/CyberDefenders/MalDoc101/imgs/img5.png]]
+![mald5](https://github.com/Sokratica/sokratica/blob/master/assets/img/maldoc101/img5.png?raw=true)
 
 - Respuesta rápida: el malware es de la familia **Emotet**. Pero, ¿qué significa eso? En la página de Karspersky se puede leer lo siguiente[^4]:
 
@@ -153,13 +151,13 @@ shasum sample.bin.mlz
 
 Para responder a esta pregunta no necesitamos ejecutar ningún nuevo comando. Si aún tienes el output cuando corrimos el "olevba", si recorres los resultados llegarás eventualmente a ver una cadena de caracteres enorme que están en base64 (te pongo como evidencia sólo una parte de la string):
 
-![[WriteUps/CyberDefenders/MalDoc101/imgs/img6.png]]
+![mald6](https://github.com/Sokratica/sokratica/blob/master/assets/img/maldoc101/img6.png?raw=true)
 
 - Lo que a nosotros nos interesa es identificar qué cadena es responsable de esto. Como lo mencioné anteriormente, la herramienta nos da el nombre del objeto que está analizando. Si contrastamos el nombre con la lista que arroja el "oledump" podemos ver que corresponde al objeto **34**.
 
 - En un escenario en el que no supiéramos que hay una cadena en base64, podríamos obtener este hecho revisando el "resumen" del comportamiento del binario que se encuentra al final de todo el output del "olevba":
 
-![[WriteUps/CyberDefenders/MalDoc101/imgs/img7.png]]
+![mald7](https://github.com/Sokratica/sokratica/blob/master/assets/img/maldoc101/img7.png?raw=true)
 
 
 ## **5. Este documento contiene un formulario de usuario. Da el nombre.** <a name="p5"></a>
@@ -171,15 +169,14 @@ La respuesta a esta pregunta es sencilla. ¿Recuerdas que el "oledump" te ofrece
 ```
 oledir sample.bin.malz
 ```
-
-![[WriteUps/CyberDefenders/MalDoc101/imgs/img8.png]]
+![mald8](https://github.com/Sokratica/sokratica/blob/master/assets/img/maldoc101/img8.png?raw=true)
 
 
 ## **6. Este documento contiene una cadena codificada en base64 ofuscada; ¿qué valor se utiliza para rellenar (u ofuscar) esta cadena?** <a name="p6"></a>
 
 Este paso es un poco tedioso pues hay que analizar lo que hay dentro de las macros. Con lo que nos arroja el "olevba" podemos responder a esta pregunta. Si vamos revisando el output veremos que empieza a ver "strings" que parecen asignación de valores, llamadas a funciones, etc.:
 
-![[WriteUps/CyberDefenders/MalDoc101/imgs/img9.png]]
+![mald9](https://github.com/Sokratica/sokratica/blob/master/assets/img/maldoc101/img9.png?raw=true)
 
 - Revisando la información, podemos ver que estas llamadas a funciones perteneces al objeto llamado "govwiahtoozfaid" número **15** (una macro).
 
@@ -193,7 +190,7 @@ oledump.py -s 15 --vbadecompresscorrupt sample.bin.malz
 
 - Analizando los resultados del último comando que corrimos podemos ver que hay una línea que "splitea" justamente esa cadena:
 
-![[WriteUps/CyberDefenders/MalDoc101/imgs/img10.png]]
+![mald10](https://github.com/Sokratica/sokratica/blob/master/assets/img/maldoc101/img10.png?raw=true)
 
 - La cadena de caracteres que se está spliteando es nuestra respuesta.
 
@@ -209,7 +206,7 @@ oledump.py -s 34 -d sample.bin.malz > dumped64.txt
 - Copiamos y pegamos todo como input en el cyberchef. Vamos a utilizar la función "Find/Replace" para buscar la cadena de la pregunta anterior, que es la cadena en base64 ofuscada que encontramos.
 - Hay que asegurarnos de buscarla como "cadena simple" y como output obtendremos nuestro tesoro:
 
-![[WriteUps/CyberDefenders/MalDoc101/imgs/img11.png]]
+![mald11](https://github.com/Sokratica/sokratica/blob/master/assets/img/maldoc101/img11.png?raw=true)
 
 
 ## **8. ¿Qué clase WMI se utiliza para crear el proceso para lanzar el troyano?** <a name="p8"></a>
@@ -221,7 +218,7 @@ Para responder a esta pregunta vamos a reciclar el output del cyberchef y usarlo
 	- Generic Code Beauty
 	- Remove null bytes
 
-![[Pasted image 20230114192511.png]]
+![mald12](https://github.com/Sokratica/sokratica/blob/master/assets/img/maldoc101/img12.png?raw=true)
 
 - Allí podemos ver cómo se define la wmiclass a "win32_Process".
 
@@ -230,7 +227,7 @@ Para responder a esta pregunta vamos a reciclar el output del cyberchef y usarlo
 
 En el mismo resultado del código en texto claro podemos ver todas las llamadas a los dominios:
 
-![[Pasted image 20230114192953.png]]
+![mald13](https://github.com/Sokratica/sokratica/blob/master/assets/img/maldoc101/img13.png?raw=true)
 
 - De allí extraemos sólo la primera y esa es nuestra respuesta.
 
