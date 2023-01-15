@@ -23,7 +23,6 @@ excerpt: "Este es una guía de cómo resolver, paso a paso, el reto getpdf de la
     2.9 [Pregunta 9](#p9)
 3. [Preguntas y repuestas](#pyr)
 
-
 # Preámbulo <a name="pre"><a>
 
 <html>
