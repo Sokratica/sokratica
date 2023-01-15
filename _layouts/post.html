@@ -1,23 +1,23 @@
 ---
-layout: description
+layout: default
 ---
-<h2>{{ page.title }}</h2>
-<small>{{ post.date | date_to_string }}</small>
-{{content}}
 
-<div class="post-footer">
-<div class="post-categories">
-  Categorías :
-  {% if post %}
-    {% assign categories = post.categories %}
-  {% else %}
-    {% assign categories = page.categories %}
-  {% endif %}
-  {% for category in categories %}
-      <a href="{{site.url}}/categories/#{{category|slugize}}">{{category}}</a>
-  {% unless forloop.last %}&nbsp;{% endunless %}
-  {% endfor %}
-</div>
-<div>{% include share_buttons.html %}</div>
+<h1>
+  {{ page.title }}
+</h1>
+{% if page.image %}
+  <img src="{{ site.github.url }}/assets/img/{{ page.image }}">
+{% endif %}
+<article>
+  {{ content }}
+</article>
+{% if site.hide_post_date != true %}
+  {% include post-date.html %}
+{% endif %}
 
-</div>
+{% if site.hide_related_posts != true %}
+  {% include related-posts.html %}
+{% endif %}
+{% if site.data.settings.disqus.comments %}
+  {% include disqus.html %}
+{% endif %}

@@ -5,12 +5,20 @@ title : Writeup | CyberDefenders | MalDoc101
 categories: [Writeups CyberDefenders]
 tags: Writeups, Writeups Español, Cyberdefenders, MalDoc101, Análisis de Malware, Maldocs, Análisis de Documentos Maliciosos
 excerpt: "Este es una guía de cómo resolver, paso a paso, el reto MalDoc101 de la plataforma Cyberdefenders.org"
+image: mountains.jpg
 ---
+
+Este es una guía de cómo resolver, paso a paso, el reto MalDoc101 de la plataforma Cyberdefenders.org
+
+Tags: Writeups, Writeups Español, Cyberdefenders, MalDoc101, Análisis de Malware, Maldocs, Análisis de Documentos Maliciosos.
+
+## Escenario:
+Es común que los actores de amenazas utilicen técnicas de Living Off The Land (LOTL), como la ejecución de PowerShell para avanzar en sus ataques y la transición de código de macros. Este desafío pretende mostrar cómo se puede realizar a menudo un análisis rápido para extraer COI importantes. Este ejercicio se centra en técnicas estáticas de análisis.
 
 # Índice
 
 1. [Preámbulo](#pre)\\
-    1.1 [Introducción](#intro)\\
+    1.1 [Introducción](#intro)
 2. [Write Up](#wu)\\
     2.1 [Pregunta 1](#p1)\\
     2.2 [Pregunta 2](#p2)\\
@@ -20,7 +28,7 @@ excerpt: "Este es una guía de cómo resolver, paso a paso, el reto MalDoc101 de
     2.6 [Pregunta 6](#p6)\\
     2.7 [Pregunta 7](#p7)\\
     2.8 [Pregunta 8](#p8)\\
-    2.9 [Pregunta 9](#p9)\\
+    2.9 [Pregunta 9](#p9)
 3. [Preguntas y respuestas](#pyr)
 
 # Preámbulo <a name="pre"></a>
@@ -41,12 +49,6 @@ table, th, td {
 |SHA1SUM|4d482527cf63400dc98ff574903f1ea7dbffb6cd|
 |Autor|Josh Stroschein|
 |Tags|Macro, Oledump, base64, Malicious Document|
-
-
-## Escenario
-
-Es común que los actores de amenazas utilicen técnicas de Living Off The Land (LOTL), como la ejecución de PowerShell para avanzar en sus ataques y la transición de código de macros. Este desafío pretende mostrar cómo se puede realizar a menudo un análisis rápido para extraer COI importantes. Este ejercicio se centra en técnicas estáticas de análisis.
-
 
 ## Herramientas
 
