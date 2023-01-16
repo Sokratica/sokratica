@@ -5,7 +5,16 @@ title : Writeup | CyberDefenders | getpdf
 categories: [Writeups CyberDefenders]
 tags: Writeups, Writeups Español, Cyberdefenders, getpdf, Análisis de Malware, Maldocs, Análisis de Documentos Maliciosos
 excerpt: "Este es una guía de cómo resolver, paso a paso, el reto getpdf de la plataforma Cyberdefenders.org"
+image: cd_getpdf.png
 ---
+
+Este es una guía de cómo resolver, paso a paso, el reto getpdf de la plataforma Cyberdefenders.org
+
+Tags: Writeups, Writeups Español, Cyberdefenders, getpdf, Análisis de Malware, Maldocs, Análisis de Documentos Maliciosos
+
+## Escenario
+
+El formato PDF es el estándar, *de facto*, en el intercambio de documentos en línea. Sin embargo, esta popularidad también ha atraído a los ciberdelincuentes a la hora de propagar malware a usuarios desprevenidos. La capacidad de generar archivos pdf maliciosos para distribuir malware es una funcionalidad que se ha incorporado a muchos kits de exploits. Como los usuarios son menos precavidos a la hora de abrir archivos PDF, el archivo PDF malicioso se ha convertido en un vector de ataque bastante exitoso. El tráfico de red capturado en *lala.pcap* contiene tráfico de red relacionado con un ataque típico de archivo PDF malicioso, en el que un usuario desprevenido abre una página web comprometida, que redirige el navegador web del usuario a una URL de un archivo PDF malicioso. Cuando el complemento PDF del navegador abre el PDF, se aprovecha la versión sin parches de Adobe Acrobat Reader y, como resultado, descarga e instala silenciosamente malware en la máquina del usuario.
 
 # Índice
 
@@ -41,12 +50,6 @@ table, th, td {
 |SHA1SUM|81b99e0094edde5de6cec7d9f5cd391d9eca3eb2|
 |Autor|The Honeynet Pot|
 |Tags|pdf, macro, cve, exploit| 
-
-
-## Escenario
-
-El formato PDF es el estándar, *de facto*, en el intercambio de documentos en línea. Sin embargo, esta popularidad también ha atraído a los ciberdelincuentes a la hora de propagar malware a usuarios desprevenidos. La capacidad de generar archivos pdf maliciosos para distribuir malware es una funcionalidad que se ha incorporado a muchos kits de exploits. Como los usuarios son menos precavidos a la hora de abrir archivos PDF, el archivo PDF malicioso se ha convertido en un vector de ataque bastante exitoso. El tráfico de red capturado en *lala.pcap* contiene tráfico de red relacionado con un ataque típico de archivo PDF malicioso, en el que un usuario desprevenido abre una página web comprometida, que redirige el navegador web del usuario a una URL de un archivo PDF malicioso. Cuando el complemento PDF del navegador abre el PDF, se aprovecha la versión sin parches de Adobe Acrobat Reader y, como resultado, descarga e instala silenciosamente malware en la máquina del usuario.
-
 
 ## Herramientas
 
