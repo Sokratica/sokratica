@@ -103,9 +103,9 @@ Cuando descomprimes el zip del reto, se encuentran otros 4 objetos:
 	- archive_browser.html
 	- archive_browser.html:Zone.Identifier
 
-![eli1](../assets/img/Eli/img1.png)
+![eli1](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img1.png?raw=true)
 
-![eli2](../assets/img/Eli/img2.png)
+![eli2](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img2.png?raw=true)
 
 - En los directorios de "Takeout" es donde parece estar la carnita del CFT. Así que procederemos artesanalmente (directorio por directorio) a buscar lo que nos pide el reto.
 
@@ -117,7 +117,7 @@ Cuando descomprimes el zip del reto, se encuentran otros 4 objetos:
 
 La información para esta pregunta se encuentra en el comprimido "2021 CTF - Chromebook.tgz". Yo extraje los directorios del zip con la herramienta "7-Zip". Si ya tienes instalada la herramienta, literal sólo hay que darle click derecho -> "Abrir con" y elegimos 7-zip y extraemos el comprimido "2021 CTF - Chromebook.tar" al directorio de trabajo actual.
 
-![Eli3](../assets/img/Eli/img3.png)
+![Eli3](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img3.png?raw=true)
 
 Lo que hice una vez teniendo el .tar fue extraer la información de dentro desde consola con el siguiente comando:
 
@@ -127,7 +127,7 @@ Lo que hice una vez teniendo el .tar fue extraer la información de dentro desde
 ```
 tar -xvzt "C:\Users\tu_usuario\Desktop\c78-Chromebook\2021 CTF - Chromebook.tar" -C C:\Users\tu_usuario\Desktop\c78-Chromebook\Evidencia
 ```
-![Eli4](../assets/img/Eli/img4.png)
+![Eli4](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img4.png?raw=true)
 
 
 - Si todo salió bien con la extracción del tar, esto es más o menos lo que deberías poder ver.
@@ -153,16 +153,16 @@ tree - | findstr /N Downloads
 
 - La flag "/N" nos va a mostrar la línea donde se encontró el match.
 
-![Eli5](../assets/img/Eli/img5.png)
+![Eli5](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img5.png?raw=true)
 
 
 Nuestras carpetas están en las líneas **33, 91, 198, 1135**. Si abrimos nuestro fichero txt podremos deducir la ruta de la carpeta que nos interesa. Ya te digo que la que nos interesa es la de la línea 198.
 
-![Eli6](../assets/img/Eli/img6.png)
+![Eli6](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img6.png?raw=true)
 
 La ruta es: decrypted/mount/user/Downloads
 
-![Eli7](../assets/img/Eli/img7.png)
+![Eli7](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img7.png?raw=true)
 
 
 ## **2. Sonríe a la cámara - ¿Cuál es el hash MD5 de la foto de perfil del usuario?** <a name="p2"></a>
@@ -175,14 +175,14 @@ tree . | findstr Account
 
 - Como no está buscando un match exacto, en el output podemos ver un match en la línea 183.
 
-![Eli8](../assets/img/Eli/img8.png)
+![Eli8](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img8.png?raw=true)
 
 
 - Lo que podemos ver cuando vamos a nuestro txt es que dentro de ese carpeta hay un subdirectorio llamado "Avatar Images"... bastante  sugerente.
 
 Dentro de esta carpeta hay un fichero llamado "eflatt610Xgmail.com". Lo que hice fue usar una aplicación web para extraer el MD5:
 
-![Eli9](../assets/img/Eli/img9.png)
+![Eli9](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img9.png?raw=true)
 
 
 La web que usé fue [conversion-tool](https://www.conversion-tool.com/md5/).
@@ -196,14 +196,14 @@ MD5:
 
 Si recordamos, en la carpeta de descargas de Eli había varias imágenes. Una de ellas, en concreto la llamada "Screenshot 2021-03-04 at 3.17.06 AM.png", es una captura de pantalla de una ruta trazada desde el Maps. En esa captura se puede ver que la ciudad de destino es Plattsburgh:
 
-![Eli10](../assets/img/Eli/img10.png)
+![Eli10](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img10.png?raw=true)
 
 
 ## **4. Prométemelo - ¿Cuántas promesas hace Wickr?** <a name="p4"></a>
 
 En el mismo directorio podemos ver que hay un archivo pdf que se llama "Wickr-Customer-Security-Promises-November-2020". En el nombre podemos ver la string "Wickr", dentro del pdf veremos nuestra respuesta:
 
-![Eli11](../assets/img/Eli/img11.png)
+![Eli11](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img11.png?raw=true)
 
 
 ## **5. Key-ty Cat - ¿Cuáles son los cinco últimos caracteres de la clave de la extensión Tabby Cat?** <a name="p5"></a>
@@ -212,11 +212,11 @@ Para contestar esta pregunta utilicé una de las herramientas recomendadas por e
 
 Una vez instalado e importados los ficheros de nuestra carpeta Evidencia, podemos ver lo siguiente (yo usé el GUI de la herramienta):
 
-![Eli12](../assets/img/Eli/img12.png)
+![Eli12](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img12.png?raw=true)
 
 En la pregunta se comenta algo de una extensión, por lo que busqué la string "tabby" en el "Chromebook History" y nos arroja dos urls que hacen referencia a la "webstore". Si buscamos la extensión "tabby-cat" incluso podemos constatar que esa extensión de navegador existe.
 
-![Eli13](../assets/img/Eli/img13.png)
+![Eli13](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img13.png?raw=true)
 
 - En la url se hace referencia al recurso "mefhakmgclhhfbdadeojlkbllmecialg". Si buscamos esta string con nuestro método del tree y luego buscamos en nuestro txt veremos que dentro del directorio "user" hay una carpeta llamada "Extensions".
 - Dentro veremos una carpeta llamada "2.0.0_0" y, dentro, un fichero llamado "manifest": allí es donde se encuentra la información que buscamos.
@@ -225,7 +225,7 @@ En la pregunta se comenta algo de una extensión, por lo que busqué la string "
 ```
 type manifest.json
 ```
-![Eli14](../assets/img/Eli/img14.png)
+![Eli14](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img14.png?raw=true)
 
 **Ruta al json:** decrypted/mount/user/Extensions/mefhakmgclhhfbdadeojlkbllmecialg/2.0.0_0/
 
@@ -236,21 +236,21 @@ De manera natural podemos inferir dónde podría estar almacenada la música de 
 
 Sin embargo, debo admitir que me dejé llevar por la pregunta y estuve buscando la respuesta en las carpetas de descargas que podemos encontrar con nuestro método. No obstante, los archivos mp3 se encuentran en la ruta: decrypted/mount/user/MyFiles/Music:
 
-![Eli15](../assets/img/Eli/img15.png)
+![Eli15](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img15.png?raw=true)
 
 
 ## **7. Autocompletar, desplegar - ¿Qué palabra se autocompletó más?** <a name="p7"></a>
 
 La herramienta cleaap tiene una opción para extraer un reporte del autocompletado. Allí podemos ver lo que buscamos: email.
 
-![Eli16](../assets/img/Eli/img16.png)
+![Eli16](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img16.png?raw=true)
 
 
 ## **8. Vestirse para el éxito - ¿Cuál es el tamaño lógico de la imagen de este pájaro en bytes?** <a name="p8"></a>
 
 La curiosidad mató al gato, dice el dicho; pero en nuestro caso, ayudó a resolver esta pregunta. Si viste las imágenes que descargó Eli, habrás visto que una de ellas, la llamada "tux", es una imagen del "pájaro" de Linux. Esta es la imagen a la que hace referencia la pregunta:
 
-![Eli17](../assets/img/Eli/img17.png)
+![Eli17](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img17.png?raw=true)
 
 **Asegúrate que cuando metas la respuesta en la web de cyberdefenders, separes los decimales con una coma (,).**
 
@@ -259,20 +259,20 @@ La curiosidad mató al gato, dice el dicho; pero en nuestro caso, ayudó a resol
 
 En el cleapp hay un reporte de los sitios web más visitados. Allí encontramos nuestra respuesta: protonmail.com:
 
-![Eli18](../assets/img/Eli/img18.png)
+![Eli18](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img18.png?raw=true)
 
 
 ## **10. Vroom Vroom, ¿Cómo se llama el tema relacionado con los coches?** <a name="p10"></a>
 
 La pregunta hace referencia a un "tema", supuse que se trataba de algún tema para el navegador que Eli usa. Bajo esta hipótesis, mi razonamiento fue el siguiente: al igual que con la extensión "tabby-cat", quizá el tema elegido para el navegador se almacene en la misma ruta. Así, busqué "theme" en la barra del buscador y me arrojó, entre otros resultados, unas imágenes de nombre "theme_frame" y "theme_ntp_background", que son la misma imagen: un carro rojo.
 
-![Eli19](../assets/img/Eli/img19.png)
+![Eli19](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img19.png?raw=true)
 
 Una vez ubicada la carpeta donde se encuentran esas imágenes, busqué el "manifest.json" y al leerlo encontré el nombre de "Lamborghini Cherry"; esa es nuestra respuesta.
 
 Bueno, en realidad, en el manifest de puede leer Lam**bro**ghini. No sé si es una error o qué pero nuestra respuesta es Lamborghini.
 
-![Eli20](../assets/img/Eli/img20.png)
+![Eli20](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img20.png?raw=true)
 
 
 ## **11. Tienes correo - ¿Cuántos correos electrónicos has recibido de notificationXservice.tiktok.com?** <a name="p11"></a>
@@ -282,7 +282,7 @@ Para esta pregunta hay que irnos a otro lugar. En la evidencia que nos provee el
 ```
 findstr notification@service.tiktok.com "All mail Including Spam and Trash.mbox" | findstr From
 ```
-![Eli21](../assets/img/Eli/img21.png)
+![Eli21](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img21.png?raw=true)
 
 
 ## **12. Hambriento de direcciones - ¿A dónde pidió el usuario direcciones en Mar 4, 2021, at 4:15:18 AM EDT** <a name="p12"></a>
@@ -291,14 +291,14 @@ Esta es una pregunta difícil de responder. La pregunta misma ya nos da una pist
 
 Lo que hice después fue abrir el html de la actividad del navegador en el Firefox y me fui a la opción de "My Activity". En "Exported Files" busqué uno a uno en los html la hora especificada en la pregunta y allí pude ver, dentro de **"Maps"** lo siguiente:
 
-![Eli22](../assets/img/Eli/img22.png)
+![Eli22](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img22.png?raw=true)
 
 
 ## **13. ¿Quién define lo esencial? - Lo que se buscó el Mar 4, 2021, at 4:09:35 AM EDT** <a name="p13"></a>
 
 Para esta pregunta usamos el mismo método que la pregunta anterior. Ahora vemos lo que hay en la opción de "Search" y se buscamos por la hora, podemos ver que hay una búsqueda que se realizó bajo los criterios que tenemos:
 
-![Eli23](../assets/img/Eli/img23.png)
+![Eli23](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img23.png?raw=true)
 
 La búsqueda es: "is travelling to get chicken essential travel".
 
@@ -307,7 +307,7 @@ La búsqueda es: "is travelling to get chicken essential travel".
 
 La lógica de esta serie de preguntas nos obliga a buscar en la información rescatada y que podemos ver dese nuestro navegador. Si buscamos, hay una opción de Youtube y, también, un fichero json llamado "subscriptions". A esa es al que hay que apuntar, si visualizamos el contenido vemos que:
 
-![Eli24](../assets/img/Eli/img24.png)
+![Eli24](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img24.png?raw=true)
 
 - Al principio creí que era un error, pero al tener una cadena vacía, sólo puse **0** como respuesta y listo.
 
@@ -316,14 +316,14 @@ La lógica de esta serie de preguntas nos obliga a buscar en la información res
 
 En la misma sección de Youtube, en el html de "watch-history" se puede ver qué vídeos visualizó el usuario. Para obtener la fecha en que se subió el vídeo a la plataforma lo abrimos y extraemos la fecha:
 
-![Eli25](../assets/img/Eli/img25.png)
+![Eli25](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img25.png?raw=true)
 
 
 ## **16. ¿Cuánto cuesta? - ¿Cuál es el precio del cinturón?** <a name="p16"></a>
 
 Bajo la misma lógica me puse a buscar en las opciones del navegador hasta que encontré un archivo excel llamado "To-Purchase". Dentro encontrarás una celda que dice "Pebbled Leather Belt" cuyo precio es 98.5
 
-![Eli26](../assets/img/Eli/img26.png)
+![Eli26](https://github.com/Sokratica/sokratica/blob/master/assets/img/Eli/img26.png?raw=true)
 
 ---
 
