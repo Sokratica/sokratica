@@ -98,13 +98,14 @@ Un paso muy importante antes de continuar es asegurarse de que las MV que estemo
 
 - Hay que estar seguros de que en la configuración de Red de la MV esté en el modo "Adaptador sólo-anfitrión" y de que los otros adaptadores estén inhabilitados:
 
-![[WriteUps/CyberDefenders/Obfuscated/img/img1.png]]
+![obfuscated1](https://github.com/Sokratica/sokratica/blob/master/assets/img/obfuscated/img1.png?raw=true)
 
 - Por otra parte, podemos corroborar esta configuración pingeando a la ip de Google y, por si las dudas, desde el navegador que tengamos instalado, intentar acceder a cualquier web:
 
-![[WriteUps/CyberDefenders/Obfuscated/img/img2.png]]
+![obfuscated1](https://github.com/Sokratica/sokratica/blob/master/assets/img/obfuscated/img2.png?raw=true)
 
-![[WriteUps/CyberDefenders/Obfuscated/img/img3.png]]
+![obfuscated1](https://github.com/Sokratica/sokratica/blob/master/assets/img/obfuscated/img3.png?raw=true)
+
 
 **1. ¿Cuál es el hash sha256 del archivo doc?** <a name="p1"></a>
 
@@ -122,7 +123,7 @@ ff2c8cadaa0fd8da6138cce6fce37e001f53a5d9ceccd67945b15ae273f4d751
 
 - Dado que se trata de un documento malicioso, nuestras herramientas clásicas de análisis (pestudio, peview, capa) podrían no arrojar información valioso. A lo mucho, podemos constatar algo de información que ya teníamos si corremos la muestra en el PEStudio:
 
-![[WriteUps/CyberDefenders/Obfuscated/img/img4.png]]
+![obfuscated1](https://github.com/Sokratica/sokratica/blob/master/assets/img/obfuscated/img4.png?raw=true)
 
 
 **2. Varias secuencias contienen macros en este documento. Proporcione el número de la más baja.** <a name="p2"></a>
@@ -135,7 +136,7 @@ Inicialmente, correremos el oledump sobre la muestra:
  oledump.py ..\sample\49b367ac261a722a7c2bbbc328c32545 > oledump.txt
 ```
 
-![[WriteUps/CyberDefenders/Obfuscated/img/img5.png]]
+![obfuscated1](https://github.com/Sokratica/sokratica/blob/master/assets/img/obfuscated/img5.png?raw=true)
 
 - Desde aquí ya podemos ver que hay una macro potencialmente maliciosa embebida en el documento. Ésta está señalada con la "M" en el objeto con índice **8**.
 
@@ -150,21 +151,21 @@ olevba.exe ..\sample\49b367ac261a722a7c2bbbc328c32545 > olevba.txt
 
 - Entre otras cosas, podemos confirmar que hay un script en el objeto 8, llamado "Module1", del documento:
 
-![[WriteUps/CyberDefenders/Obfuscated/img/img6.png]]
+![obfuscated1](https://github.com/Sokratica/sokratica/blob/master/assets/img/obfuscated/img6.png?raw=true)
 
 Otra información relevante podemos encontrar:
 
 - Hay un indicador de compromiso que señala un ejecutable escrito en "js", jscript, que es un lenguaje común para código hecho en wscript[^1]. Esta es la respuesta a la pregunta 5.
 
-![[WriteUps/CyberDefenders/Obfuscated/img/img7.png]]
+![obfuscated1](https://github.com/Sokratica/sokratica/blob/master/assets/img/obfuscated/img7.png?raw=true)
 
 Asumiendo que el código se ejecutará dentro de una PowerShell, lo que hice fue buscar si había alguna string que indicara una llamada a la powershell:
 
-![[WriteUps/CyberDefenders/Obfuscated/img/img8.png]]
+![obfuscated1](https://github.com/Sokratica/sokratica/blob/master/assets/img/obfuscated/img8.png?raw=true)
 
 Con esto, podemos hacer un cat a nuestra evidencia y ver qué es lo que hay en la línea 80. Varias son las cosas interesantes alrededor de esta línea:
 
-![[WriteUps/CyberDefenders/Obfuscated/img/img9.png]]
+![obfuscated1](https://github.com/Sokratica/sokratica/blob/master/assets/img/obfuscated/img9.png?raw=true)
 
 - En primer lugar, podemos ver como se crea un fichero con el nombre "K764..." (línea 74). Después, asigna a una variable una ruta que termina en un js (esta es la respuesta a la pregunta 4). Después de algunos pasos, abre y corre una shell desde donde mete como argumentos la variable donde se encuentra el js, más una clave de descifrado: EzZETcSXyKAdF_e5I2i1.
 
@@ -183,7 +184,7 @@ Ver pregunta 3: jscript.
 
 Para parsear el js embebido en el documento malicioso, subí el documento a la web Hybrid Analysis[^2] y desde allí pude obtener el código:
 
-![[WriteUps/CyberDefenders/Obfuscated/img/img10.png]]
+![obfuscated1](https://github.com/Sokratica/sokratica/blob/master/assets/img/obfuscated/img10.png?raw=true)
 
 - En la imagen de arriba podemos ver que la variable a la cual se le asignan los argumentos fue nombrada: "wvy1".
 
@@ -207,7 +208,7 @@ Asumiendo que no ocurre ningún error, la siguiente función que se ejecutaría 
 
 Como se puede ver en la imagen, la variable "LUK7" es a la que se le asigna todo el rango de caracteres del abecedario, tanto en minúsculas como mayúsculas, más los números naturales y el caracteres especiales "/" y "+":
 
-![[WriteUps/CyberDefenders/Obfuscated/img/img11.png]]
+![obfuscated1](https://github.com/Sokratica/sokratica/blob/master/assets/img/obfuscated/img11.png?raw=true)
 
 
 **11. ¿Qué esquema de codificación es responsable de decodificar esta función?** <a name="p11"></a>
@@ -219,7 +220,7 @@ Los caracetes asignados a la variable de la pregunta anterior son típicos del B
 
 Los bucles "for" son los encargados de realizar operaciones algebraicas sobre los argumentos metidos en la función.
 
-![[WriteUps/CyberDefenders/Obfuscated/img/img12.png]]
+![obfuscated1](https://github.com/Sokratica/sokratica/blob/master/assets/img/obfuscated/img12.png?raw=true)
 
 - A esta técnica se le llama "Key-Scheduling".
 
@@ -228,7 +229,7 @@ Los bucles "for" son los encargados de realizar operaciones algebraicas sobre lo
 
 Regresando al principio del código, vemos que la función "CpPT" tiene dos argumentos, el primero es el "ssWZ" al cual se le ha asignado el valor de la función "wvy1" que, a su vez, tiene como argumento lo que sea que entre como input desde la consola:
 
-![[WriteUps/CyberDefenders/Obfuscated/img/img13.png]]
+![obfuscated1](https://github.com/Sokratica/sokratica/blob/master/assets/img/obfuscated/img13.png?raw=true)
 
 Así que, el valor del argumento viene de la "command-line".
 
@@ -257,14 +258,14 @@ No sabía la respuesta de esta pregunta así que lo que hice fue googlear, liter
 
 Finalmente, lo que nos queda es meter el input del código de la función "y3zb" al Cyberchef:
 
-![[WriteUps/CyberDefenders/Obfuscated/img/img14.png]]
+![obfuscated1](https://github.com/Sokratica/sokratica/blob/master/assets/img/obfuscated/img14.png?raw=true)
 
 La recetas son:
 - From Base64
 - RC4
 	- Sabemos que la clave de desencriptado es la de la pregunta 3.
 
-![[WriteUps/CyberDefenders/Obfuscated/img/img15.png]]
+![obfuscated1](https://github.com/Sokratica/sokratica/blob/master/assets/img/obfuscated/img15.png?raw=true)
 
 ---
 
