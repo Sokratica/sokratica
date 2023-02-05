@@ -47,7 +47,7 @@ Al margen de lo anterior, aun se pueden "borrar" los metadatos de archivos pdf, 
 
 # ¿Qué es lo que pasa por detrás? <a name="what"></a>
 
-![[flujo.png]]
+![metaE](https://github.com/Sokratica/sokratica/blob/master/assets/img/metaE/flujo.png?raw=true)
 
 Y te estarás preguntando, ¿y en qué momento me metes la reverse-shell? Pues, no; nada de eso. El script es sencillo y, además, puedes ver el código ya sea para comprobar que no haya cosas turbias, o para que lo modifiques a tu gusto para que haga más cosas.
 
@@ -74,7 +74,7 @@ comando
 python3 metaE.py test.pdf
 ```
 
-![[linex.png]]
+![metaE](https://github.com/Sokratica/sokratica/blob/master/assets/img/metaE/linex.png?raw=true)
 
 
 **Windows**
@@ -84,7 +84,7 @@ Comando:
 py metaE.py test.pdf
 ```
 
-![[winex.png]]
+![metaE](https://github.com/Sokratica/sokratica/blob/master/assets/img/metaE/winex.png?raw=true)
 
 
 # Código <a name="script"></a>
@@ -93,7 +93,7 @@ Aquí te dejo el código para que lo revises y luego lo copies y pegues donde qu
 
 ## Para Linux <a name="lin"></a>
 
-Script de python para Linux: metaE
+Script de python para Linux. Link al script en bruto [metaE](https://github.com/Sokratica/sokratica/tree/master/assets/img/metaE/scripts/Linux)
 
 ```
 import argparse, os, time
@@ -158,7 +158,7 @@ if __name__ == '__main__':
 ```
 ## Para Windows <a name="wind"></a>
 
-Script de python para Windows: metaE
+Script de python para Windows. Link al script raw [metaE](https://github.com/Sokratica/sokratica/tree/master/assets/img/metaE/scripts/Windows)
 
 ```
 import argparse, os, time
