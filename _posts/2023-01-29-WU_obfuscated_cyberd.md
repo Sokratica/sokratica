@@ -21,7 +21,6 @@ Durante tu turno como analista del SOC, el EDR (Endpoint Detection and Response)
 1. [Prámbulo](#pre)
 2. [Introducción](#intro)
 3. [Writeup](#wu)\\
-
     3.1 [Pregunta 1](#p1)\\
     3.1 [Pregunta 2](#p2)\\
     3.1 [Pregunta 3](#p3)\\
