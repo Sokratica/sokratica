@@ -22,23 +22,23 @@ Durante tu turno como analista del SOC, el EDR (Endpoint Detection and Response)
 2. [Introducción](#intro)
 3. [Writeup](#wu)\\
     3.1 [Pregunta 1](#p1)\\
-    3.1 [Pregunta 2](#p2)\\
-    3.1 [Pregunta 3](#p3)\\
-    3.1 [Pregunta 4](#p4)\\
-    3.1 [Pregunta 5](#p5)\\
-    3.1 [Pregunta 6](#p6)\\
-    3.1 [Pregunta 7](#p7)\\
-    3.1 [Pregunta 8](#p8)\\
-    3.1 [Pregunta 9](#p9)\\
-    3.1 [Pregunta 10](#p10)\\
-    3.1 [Pregunta 11](#p11)\\
-    3.1 [Pregunta 12](#p12)\\
-    3.1 [Pregunta 13](#p13)\\
-    3.1 [Pregunta 14](#p14)\\
-    3.1 [Pregunta 15](#p15)\\
-    3.1 [Pregunta 16](#p16)\\
-    3.1 [Pregunta 17](#p17)\\
-    3.1 [Pregunta 18](#p18)
+    3.2 [Pregunta 2](#p2)\\
+    3.3 [Pregunta 3](#p3)\\
+    3.4 [Pregunta 4](#p4)\\
+    3.5 [Pregunta 5](#p5)\\
+    3.6 [Pregunta 6](#p6)\\
+    3.7 [Pregunta 7](#p7)\\
+    3.8 [Pregunta 8](#p8)\\
+    3.9 [Pregunta 9](#p9)\\
+    3.10 [Pregunta 10](#p10)\\
+    3.11 [Pregunta 11](#p11)\\
+    3.12 [Pregunta 12](#p12)\\
+    3.13 [Pregunta 13](#p13)\\
+    3.14 [Pregunta 14](#p14)\\
+    3.15 [Pregunta 15](#p15)\\
+    3.16 [Pregunta 16](#p16)\\
+    3.17 [Pregunta 17](#p17)\\
+    3.18 [Pregunta 18](#p18)
 4. [Preguntas y respuestas](#pyr)
 
 
