@@ -8,7 +8,7 @@ excerpt: "Este es una guía de cómo resolver, paso a paso, el reto xml-macros 4
 image: cd_xmlmacros.png
 ---
 
-Este es una guía de cómo resolver, paso a paso, el reto xlm-macros 4.0 de la plataforma Cyberdefenders.org
+Esta es una guía de cómo resolver, paso a paso, el reto xlm-macros 4.0 de la plataforma Cyberdefenders.org
 
 Tags: Writeups, Writeups Español, Cyberdefenders, xlm-macros 4.0, Análisis de Malware, Análisis de Documentos Maliciosos.
 

@@ -8,7 +8,7 @@ excerpt: "Este es una guía de cómo resolver, paso a paso, el reto Obfuscated d
 image: cd_obfuscated.png
 ---
 
-Este es una guía de cómo resolver, paso a paso, el reto Obfuscated de la plataforma Cyberdefenders.org
+Esta es una guía de cómo resolver, paso a paso, el reto Obfuscated de la plataforma Cyberdefenders.org
 
 Tags: Writeups, Writeups Español, Cyberdefenders, Obfuscated, Análisis de Malware, Maldocs, Análisis de Documentos Maliciosos.
 

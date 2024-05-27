@@ -8,7 +8,7 @@ excerpt: "Este es una guía de cómo resolver, paso a paso, el reto getpdf de la
 image: cd_getpdf.png
 ---
 
-Este es una guía de cómo resolver, paso a paso, el reto getpdf de la plataforma Cyberdefenders.org
+Esta es una guía de cómo resolver, paso a paso, el reto getpdf de la plataforma Cyberdefenders.org
 
 Tags: Writeups, Writeups Español, Cyberdefenders, getpdf, Análisis de Malware, Maldocs, Análisis de Documentos Maliciosos
 

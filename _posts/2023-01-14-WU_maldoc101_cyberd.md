@@ -8,7 +8,7 @@ excerpt: "Este es una guía de cómo resolver, paso a paso, el reto MalDoc101 de
 image: cd_maldoc101.png
 ---
 
-Este es una guía de cómo resolver, paso a paso, el reto MalDoc101 de la plataforma Cyberdefenders.org
+Esta es una guía de cómo resolver, paso a paso, el reto MalDoc101 de la plataforma Cyberdefenders.org
 
 Tags: Writeups, Writeups Español, Cyberdefenders, MalDoc101, Análisis de Malware, Maldocs, Análisis de Documentos Maliciosos.
 
