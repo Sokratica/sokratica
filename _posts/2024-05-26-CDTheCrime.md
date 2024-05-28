@@ -49,7 +49,7 @@ table, th, td {
 |Reto|The Crime|
 |SHA1SUM|3eb40fd0257dd3bf7d7513e1423e54c8fced4706|
 |Autor|InfernOo|
-|Tags|Android, ALEAPP, SQLite Browser|
+|Tags|Android, ALEAPP, SQLite Browser, Autopsy Forensics|
 
 # Herramientas
 
@@ -57,6 +57,9 @@ table, th, td {
 - ALEAPP
 - SQLite Browser
 - Autopsy Forensics (intenta con esta herramienta)
+
+**Usadas adicionales**
+- Autopsy Forensics
 
 
 # Introducción <a name="intro"></a>
@@ -179,4 +182,4 @@ En esa sección podemos ver las imágenes para responder a las preguntas 4 y 5:
 
 ![crime](https://github.com/Sokratica/sokratica/blob/master/assets/img/crime/7-7.png?raw=true)
 
-Lo que sí tuve dificultad para obtener desde el Autopsy fueron los mensajes de Discord. Sin embargo, justamente esta dificultad me sirve para compartirles algo que he aprendido a lo largo de estos ejercicios y algunos casos reales que he atendido: no hay una herramienta universal, una herramienta que lo haga todo. De lo primero que debemos aprender en esta industria en general, y en esta especialidad en particular, es ha aprender varias herramientas y tecnologías. Conocer opciones y aprender a usarlas. Si bien no pudimos obtener lo que queríamos de Discord con el Autopsy, ya habíamos podido resolver esta pregunta de otra manera.
+Lo que sí tuve dificultad para obtener desde el Autopsy fueron los mensajes de Discord. Sin embargo, justamente esta dificultad me sirve para compartirles algo que he aprendido a lo largo de estos ejercicios y algunos casos reales que he atendido: no hay una herramienta universal, una herramienta que lo haga todo. De lo primero que debemos aprender en esta industria en general, y en esta especialidad en particular, es a aprender varias herramientas y tecnologías. Conocer opciones y aprender a usarlas. Si bien no pudimos obtener lo que queríamos de Discord con el Autopsy, ya habíamos podido resolver esta pregunta de otra manera.
