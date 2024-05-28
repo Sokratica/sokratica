@@ -69,8 +69,7 @@ Pese a que nos recomiendan usar la herramienta ALEAPP, yo tuve algunos problemas
 
 En cuanto a la estructura de la información que nos llega a las manos, como cualquier copia forense, hay un montón de carpetas, sub carpetas y ficheros. Puedes explorar lo que hay, lo cual es recomendable por si nunca habías visto cómo se ve un Android desde dentro, o puedes importar la copia al ALEAPP de una y ver qué te arroja.
 
-![crime](../assets/img/crime/1.png)
-
+![crime](https://github.com/Sokratica/sokratica/blob/master/assets/img/crime/1.png?raw=true)
 
 # Write Up <a name="wu"></a>
 
@@ -78,11 +77,11 @@ En cuanto a la estructura de la información que nos llega a las manos, como cua
 
 La primera pregunta se puede responder mirando las aplicaciones instaladas en el dispositivo. Lo que la GUI de la herramienta nos ofrece es una serie de secciones de la información que pudo obtener. Así, hay una sección de “installed apps”. Si nos vamos a la parte de “app icons” veremos las típicas aplicaciones de sistema de un android más, la que nos interesa, que es una app llamada “Olymp Trade”.
 
-![crime](../assets/img/crime/2.png)
+![crime](https://github.com/Sokratica/sokratica/blob/master/assets/img/crime/2.png?raw=true)
 
 Vale la pena tener en cuenta que, si nos vamos a la sección de “installed apps (gms)”, veremos otras aplicaciones que no son las del sistema. En un caso real, es importante tener esta información pues, eventualmente, querríamos saber con quién estuvo intercambiando mensajes nuestra víctima: una de las aplicaciones sobre las cuales hay que tener un ojo puesto es el “discord”.
 
-![crime](../assets/img/crime/3.png)
+![crime](https://github.com/Sokratica/sokratica/blob/master/assets/img/crime/3.png?raw=true)
 
 
 **2. De acuerdo con el testimonio del mejor amigo de la víctima, él dijo "Cuando estábamos juntos, mi amigo recibió varias llamadas que no contestó. Dijo que debía mucho dinero a quien le llamaba pero que no le podía pagar", ¿Cuánto dinero le debe a esta persona?** <a name="p2"></a>
@@ -91,11 +90,11 @@ En la segunda pregunta se nos pide averiguar cuánto dinero le debía la víctim
 
 En un caso real, y teniendo una buena metodología de investigación, quizá el primer paso sería (en la medida de lo posible) recopilar la agenda de contactos de la víctima, luego el registro de llamadas haciendo énfasis en las comunicaciones en el “día clave”. Atendiendo a esto recién dicho, en la copia de seguridad se puede obtener que los contactos registrados en el dispositivo son los siguientes:
 
-![crime](../assets/img/crime/6.png)
+![crime](https://github.com/Sokratica/sokratica/blob/master/assets/img/crime/6.png?raw=true)
 
 Seis contactos registrados en total, de los cuales no sabemos quien es nuestro perpetrador. El siguiente paso lógico, como ya mencioné, sería ir al registro de llamadas, sin embargo, y debo ser honesto admitiendo que no estoy seguro si se deba a cómo importé la copia al ALEAPP, pero desde allí no se puede visualizar el registro de llamadas. Al margen de lo anterior, explorando los ficheros de la evidencia hay uno llamado “calllog.db” en el que se encuentra esta información. La ruta absoluta a este fichero es: data\data\com.android.providers.contacts\databases\
 
-![crime](../assets/img/crime/7.png)
+![crime](https://github.com/Sokratica/sokratica/blob/master/assets/img/crime/7.png?raw=true)
 
 Ya tenemos el registro de llamadas y ya sabemos quién fue el contacto que más veces intentó llamarle, lo cual nos da una pista sobre quién podría ser el perpetrador: “Shady Wahab”. Más tomando en cuenta que el testimonio de la persona cercana a la víctima menciona que éste intentó marcarle varias veces , no tomó la llamada porque quien le marcaba era la persona a la que le debía dinero. Tenemos al posible responsable pero no la cantidad de dinero que le debía. Lo más sensato fue buscar mensajes donde se pudiera encontrar esa información, o quizá una imagen simulando una captura de pantalla donde se viera la cantidad. Sin embargo, no encontré nada.
 
@@ -110,14 +109,14 @@ El nombre del perpetrador lo encontramos desde la pregunta pasada: es Shady Waha
 
 Para esta pregunta, revisé las imágenes que pude obtener con e ALEAPP y encontré una de un hotel. Los metadatos se ve que la imagen es del 21 de septiembre, pero de igual manera hice una búsqueda inversa de imágenes en Google y me apareció el nombre del hotel: The Nile Ritz-Carlton.
 
-![crime](../assets/img/crime/8.png)
+![crime](https://github.com/Sokratica/sokratica/blob/master/assets/img/crime/8.png?raw=true)
 
 
 **5. El detective continuó su investigación haciendo preguntas en el lobby del hotel. Le informaron que la víctima había reservado la habitación por 10 días y que tenía un vuelo reservado. El investigador cree que la víctima podría tener almacenada información sobre el boleto de avión en su teléfono. Mira a donde quería volar la víctima.** <a name="p5"></a>
 
 Esta pregunta la dejé hasta el final porque no encontraba ninguna imagen como sugería la pregunta misma. Después de un rato, intentar varias cosas distintas y llegar a frustrarme, tras intentar volver a importar la evidencia en el ALEAPP desde el archivo comprimido y que me salieran varios errores, descomprimí la carpeta “data” y la volví a comprimir en un zip din contraseña e importarla de nuevo. Después de esto, el ALEAPP me dio más información que antes donde se también estaba la imagen del boleto de avión. El destino al que nuestra víctima quería volar era Las Vegas.
 
-![crime](../assets/img/crime/9.png)
+![crime](https://github.com/Sokratica/sokratica/blob/master/assets/img/crime/9.png?raw=true)
 
 
 **6. Después de examinar las conversaciones de Discord de la víctima, descubrimos que había agendado un encuentro con un amigo en un lugar específico. ¿Puedes determinar dónde debía ocurrir esa reunión?** <a name="p6"></a>
@@ -156,28 +155,28 @@ Pensé en esta solución cuando estaba caminando por la calle para tomar un desc
 
 Vale la pena hacer el miso ejercicio, pero con la herramienta Autopsy para explorar sus capacidades. Regresando a la pregunta 1, el Autopsy nos ofrece una serie de opciones de información recolectada de entre las cuales se encuentra	la de “installed programs” haciendo referencia a las aplicaciones instaladas. Allí podemos ver la respuesta a la pregunta 1:
 
-![crime](../assets/img/crime/1-1.png)
+![crime](https://github.com/Sokratica/sokratica/blob/master/assets/img/crime/1-1.png?raw=true)
 
 Asimismo, también podemos ver la sección de “messages” donde encontramos el mensaje donde se menciona la cantidad adeudada:
 
-![crime](../assets/img/crime/2-2.png)
+![crime](https://github.com/Sokratica/sokratica/blob/master/assets/img/crime/2-2.png?raw=true)
 
 Es igualmente relevante revisar la información que nos ofrece el Autopsy en comparación del ALEAPP, por ejemplo, el fichero desde donde se extrae el mensaje. En la respuesta de arriba les ofrecí revisar el fichero “bugle_db”. El Autopsy encontró el mismo mensaje en el fichero “mmssms.db”, lo cual no deja de ser interesante.
 
 El Autopsy también nos ofrece la información de los contactos almacenados en el dispositivo, así como el historial de llamadas:
 
-![crime](../assets/img/crime/3-3.png)
+![crime](https://github.com/Sokratica/sokratica/blob/master/assets/img/crime/3-3.png?raw=true)
 
-![crime](../assets/img/crime/4-4.png)
+![crime](https://github.com/Sokratica/sokratica/blob/master/assets/img/crime/4-4.png?raw=true)
 
 Uno de los problemas que experimenté usando el ALEAPP y parseando las bases de datos fue la extracción de las imágenes almacenadas en el celular. El Autopsy nos hace esa tarea más fácil. Si nos dirigimos a File Views/File Types/By Extension/ podemos ver los archivos almacenados en el sistema, incluyendo las imágenes:
 
 En esa sección podemos ver las imágenes para responder a las preguntas 4 y 5:
 
-![crime](../assets/img/crime/5-5.png)
+![crime](https://github.com/Sokratica/sokratica/blob/master/assets/img/crime/5-5.png?raw=true)
 
-![crime](../assets/img/crime/6-6.png)
+![crime](https://github.com/Sokratica/sokratica/blob/master/assets/img/crime/6-6.png?raw=true)
 
-![crime](../assets/img/crime/7-7.png)
+![crime](https://github.com/Sokratica/sokratica/blob/master/assets/img/crime/7-7.png?raw=true)
 
 Lo que sí tuve dificultad para obtener desde el Autopsy fueron los mensajes de Discord. Sin embargo, justamente esta dificultad me sirve para compartirles algo que he aprendido a lo largo de estos ejercicios y algunos casos reales que he atendido: no hay una herramienta universal, una herramienta que lo haga todo. De lo primero que debemos aprender en esta industria en general, y en esta especialidad en particular, es ha aprender varias herramientas y tecnologías. Conocer opciones y aprender a usarlas. Si bien no pudimos obtener lo que queríamos de Discord con el Autopsy, ya habíamos podido resolver esta pregunta de otra manera.
