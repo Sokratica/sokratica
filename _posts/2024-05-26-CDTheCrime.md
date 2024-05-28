@@ -28,8 +28,8 @@ Actualmente estamos en medio de una investigación de un asesinato, lo que obtuv
     3.4 [Pregunta 4](#p4)\\
     3.5 [Pregunta 5](#p5)\\
     3.6 [Pregunta 6](#p6)
-4. [Preguntas y respuestas](#pyr)
-5. [Recomendación](#rec)
+4. [Preguntas y Respuestas](#pyr)
+5. [Solución Alternativa](#rec)
 
 
 # Preámbulo <a name="pre"></a>
@@ -150,6 +150,34 @@ La siguiente pregunta es más sencilla, en los chats de Discord, el usuario “r
 6. Después de examinar las conversaciones de Discord de la víctima, descubrimos que había agendado un encuentro con un amigo en un lugar específico. ¿Puedes determinar dónde debía ocurrir esa reunión?\\
 **R: The Mob Museum**
 
-# Recomendación <a name="rec"></a>
+# Solución alternativa <a name="rec"></a>
 
 Pensé en esta solución cuando estaba caminando por la calle para tomar un descanso de este ejercicio. Una manera de visualizar y obtener la mayoría, si no toda la información para resolver todas la preguntas, es usando el Autopsy Forensics. Si te sientes atorado en esta laboratorio, usa esta herramienta.
+
+Vale la pena hacer el miso ejercicio, pero con la herramienta Autopsy para explorar sus capacidades. Regresando a la pregunta 1, el Autopsy nos ofrece una serie de opciones de información recolectada de entre las cuales se encuentra	la de “installed programs” haciendo referencia a las aplicaciones instaladas. Allí podemos ver la respuesta a la pregunta 1:
+
+![crime](../assets/img/crime/1-1.png)
+
+Asimismo, también podemos ver la sección de “messages” donde encontramos el mensaje donde se menciona la cantidad adeudada:
+
+![crime](../assets/img/crime/2-2.png)
+
+Es igualmente relevante revisar la información que nos ofrece el Autopsy en comparación del ALEAPP, por ejemplo, el fichero desde donde se extrae el mensaje. En la respuesta de arriba les ofrecí revisar el fichero “bugle_db”. El Autopsy encontró el mismo mensaje en el fichero “mmssms.db”, lo cual no deja de ser interesante.
+
+El Autopsy también nos ofrece la información de los contactos almacenados en el dispositivo, así como el historial de llamadas:
+
+![crime](../assets/img/crime/3-3.png)
+
+![crime](../assets/img/crime/4-4.png)
+
+Uno de los problemas que experimenté usando el ALEAPP y parseando las bases de datos fue la extracción de las imágenes almacenadas en el celular. El Autopsy nos hace esa tarea más fácil. Si nos dirigimos a File Views/File Types/By Extension/ podemos ver los archivos almacenados en el sistema, incluyendo las imágenes:
+
+En esa sección podemos ver las imágenes para responder a las preguntas 4 y 5:
+
+![crime](../assets/img/crime/5-5.png)
+
+![crime](../assets/img/crime/6-6.png)
+
+![crime](../assets/img/crime/7-7.png)
+
+Lo que sí tuve dificultad para obtener desde el Autopsy fueron los mensajes de Discord. Sin embargo, justamente esta dificultad me sirve para compartirles algo que he aprendido a lo largo de estos ejercicios y algunos casos reales que he atendido: no hay una herramienta universal, una herramienta que lo haga todo. De lo primero que debemos aprender en esta industria en general, y en esta especialidad en particular, es ha aprender varias herramientas y tecnologías. Conocer opciones y aprender a usarlas. Si bien no pudimos obtener lo que queríamos de Discord con el Autopsy, ya habíamos podido resolver esta pregunta de otra manera.
