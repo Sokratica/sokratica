@@ -10,7 +10,7 @@ Esta es la lista de máquinas/laboratorios/ejercicios de Blue Team que he resuel
 
 |Nombre|Etiquetas|Categoría|Dificultad|
 |:----:|:-------:|:-------:|:--------:|
-|![Insider](https://sokratica.github.io/sokratica/insiderCD)|Linux, FTL Imager, Disk Forensic, T1496, T1059, T1005, T1003|Endpoint Forensics|Fácil|
+|[Insider](https://sokratica.github.io/sokratica/insiderCD)|Linux, FTL Imager, Disk Forensic, T1496, T1059, T1005, T1003|Endpoint Forensics|Fácil|
 |[The Crime](https://sokratica.github.io/sokratica/CDTheCrime)|Android, ALEAPP, SQLite Browser, Autopsy Forensics|Endpoint Forensics|Fácil|
 |[getpdf](https://sokratica.github.io/sokratica/WU_getpdf_cyberd)|pdf, macro, cve, exploit|Análisis de Malware|Media|
 |[MalDoc101](https://sokratica.github.io/sokratica/WU_maldoc101_cyberd)|Macro, Oledump, base64, Malicious Document|Análisis de Malware|Media|
