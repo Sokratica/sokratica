@@ -3,7 +3,7 @@ layout: post
 comments: false
 title : Writeup | CyberDefenders | The Crime
 categories: [Writeups CyberDefenders]
-tags: Writeups, Writeups Español, Cyberdefenders, The Crime, End Point Forensics
+tags: Writeups, Writeups Español, Cyberdefenders, The Crime, Endpoint Forensics
 excerpt: "Este es una guía de cómo resolver, paso a paso, el reto The Crime de la plataforma Cyberdefenders.org"
 image: theCrime_portada.png
 ---

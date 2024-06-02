@@ -56,7 +56,7 @@ table, th, td {
 |Reto|XLM Macros|
 |SHA1SUM|35fb4497de1633d6887fd1453ee1426ca627eeec|
 |Autor|Josh Stroschein|
-|Tags|Macro, Oledump, XLM, XLS, Excel 4 Macros, Remnux, Anti-analysis, Office Ide|
+|Tags|Macro, Oledump, XLM, XLS, Excel 4 Macros, Remnux, Anti-analysis, Office IDE|
 
 ## Herramientas
 

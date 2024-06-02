@@ -8,13 +8,14 @@ google-ID: ''
 
 menu:
 - {name: 'Blog', url: 'writing.html'}
+- {name: 'Ejercicios resueltos', url: 'table.html'}
 - {name: 'Acerca de',   url: 'about.html'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
 #- {icon: 'github',     link: 'https://www.github.com/lenpaul'}
-- {icon: 'twitter',    link: 'https://twitter.com/Ulysezzz'}
-- {icon: 'linkedin',   link: 'https://linkedin.com/in/msc-ulises-a-39141a217'}
+#- {icon: 'twitter',    link: 'https://twitter.com/Ulysezzz'}
+#- {icon: 'linkedin',   link: 'https://linkedin.com/in/msc-ulises-a-39141a217'}
 #- {icon: 'envelope',   link: 'mailto:l.nguyen.paul@gmail.com'}
 #- {icon: 'rss-square', link: '/feed.xml'}
 # - {icon: 'rss-square', link: '/rss-feed.xml'}
