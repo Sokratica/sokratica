@@ -4,7 +4,7 @@ comments: false
 title : Writeup | CyberDefenders | Insider
 categories: [Writeups CyberDefenders]
 tags: Writeups, Writeups Español, Cyberdefenders, Insider, Endpoint Forensics
-excerpt: "Este es una guía de cómo resolver, paso a paso, el reto The Crime de la plataforma Cyberdefenders.org"
+excerpt: "Este es una guía de cómo resolver, paso a paso, el reto Insider de la plataforma Cyberdefenders.org"
 image: insider.png
 ---
 
