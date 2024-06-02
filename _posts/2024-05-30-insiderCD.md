@@ -124,14 +124,13 @@ Recomiendo enormemente	que le eches un ojo a la web de Mitre para que te familia
 
 Por si es la primera vez que usa FTK Imager, te voy a describir cómo abrir el fichero “ed1” que viene en la evidencia. Tan solo hay que darle a “Add Evidence Item”, seleccionar la ruta donde tengas almacenada el “ad1” y listo. Verás algo como esto una vez que todo esté listo:
 
-![insider](../assets/img/insider/1.png)
-
+![insider](https://github.com/Sokratica/sokratica/blob/master/assets/img/insider/1.png?raw=true)
 
 **1. ¿Qué distribución de Linux se está utilizando en esta máquina?** <a name="p1"></a>
 
 Explorando el directorio “boot” podemos ver varios ficheros que nos dicen la distribución de Linux de la computadora de la investigada. El directorio “boot” es fundamental para el arranque del sistema operativo de las máquinas Linux, por lo que es lógico que dentro de este directorio encontremos información sobre la distribución concreta de la máquina.
 
-![insider](../assets/img/insider/2.png)
+![insider](https://github.com/Sokratica/sokratica/blob/master/assets/img/insider/2.png?raw=true)
 
 
 **2. ¿Cuál es el hash MD5 del archivo apache access.log?** <a name="p2"></a>
@@ -142,14 +141,14 @@ La pregunta misma ya no está diciendo lo que tenemos que buscar: el servidor we
 
 Y obtenemos: D41D8CD98F00B204E9800998ECF8427E
 
-![insider](../assets/img/insider/3.png)
+![insider](https://github.com/Sokratica/sokratica/blob/master/assets/img/insider/3.png?raw=true)
 
 
 **3. Se cree que se descargó una herramienta de volcado de credenciales. ¿Cuál es el nombre de la descarga?** <a name="p3"></a>
 
 Aquí la respuesta es relativamente sencilla. Si pensamos en un programa que se descarga, lo natural es buscar en el directorio de descargas. Dado que el directorio “root” es, salvando las distancias, equivalente a “MiPC” de Windows, dentro de “root” encontraremos nuestra carpeta. Si buscamos allí encontraremos un zip del programa “mimikatz_trunk.zip” que es el programa que buscamos.
 
-![insider](../assets/img/insider/4.png)
+![insider](https://github.com/Sokratica/sokratica/blob/master/assets/img/insider/4.png?raw=true)
 
 Como curiosidad, mimikatz “es capaz de extraer contraseñas en texto claro, hashes, códigos PIN y tickets de Kerberos de la memoria. Además, puede realizar ataques de pass-the-hash, pass-the-ticket o crear Golden tickets, y jugar con certificados o claves privadas, bóvedas y más”. Una herramienta básica para los especialistas en seguridad ofensiva.
  
@@ -158,28 +157,28 @@ Como curiosidad, mimikatz “es capaz de extraer contraseñas en texto claro, ha
 
 Lo primero que se me ocurrió fue buscar “manualmente” en las carpetas del sistema, es decir, en los subdirectorios del “root”, sin embargo, no encontré nada por la simple razón de que el fichero pudo haber sido eliminado y que no estuviera visible. Luego, lo que se me ocurrió revisar el historial de comandos introducidos en la consola del sistema y allí encontré que el fichero “SuperSecretFile.txt” fue creado con el comando “touch”:
 
-![insider](../assets/img/insider/5.png)
+![insider](https://github.com/Sokratica/sokratica/blob/master/assets/img/insider/5.png?raw=true)
 
 
 **5. ¿Qué programa utilizó didyouthinkwedmakeiteasy.jpg durante la ejecución?** <a name="p5"></a>
 
 En el mismo historial de la bash encontramos el comando del programa utilizado para abrir la imagen jpg:
 
-![insider](../assets/img/insider/6.png)
+![insider](https://github.com/Sokratica/sokratica/blob/master/assets/img/insider/6.png?raw=true)
 
 
 **6. ¿Cuál es el tercer objetivo de la lista de tareas que creó Karen?** <a name="p6"></a>
 
 Para esta pregunta no encontré algún fichero que se llamara “Checklist” o algo similar, así que busqué “manualmente” un archivo que me diera un indicio y me encontré un fichero “Cheklist” con la respuesta dentro de la carpeta de Escritorio (Desktop): Profit.
 
-![insider](../assets/img/insider/7.png)
+![insider](https://github.com/Sokratica/sokratica/blob/master/assets/img/insider/7.png?raw=true)
 
 
 **7. ¿Cuántas veces se ejecutó Apache?** <a name="p7"></a>
 
 Como ya habíamos visto en la pregunta dos, hay un fichero que se llama “access.log” dentro del programa de apache. Cuando te diriges a ese archivo, podemos ver que no nos muestra información. Al principio pensé que era un problema de exportación o algo similar, pero a veces las respuesta son más sencillas: si no hay información en los logs es porque quizá nunca se inició el programa, es decir, el número de veces que se ejecutó el apache es: 0.
 
-![insider](../assets/img/insider/8.png)
+![insider](https://github.com/Sokratica/sokratica/blob/master/assets/img/insider/8.png?raw=true)
 
 
 **8. Se cree que esta máquina se usó para atacar a otra. ¿Qué archivo prueba esto?** <a name="p8"></a>
@@ -193,28 +192,28 @@ Con estos indicios podemos asumir frente a la evidencia que necesitamos para est
 
 Como evidencia adicional -si esto fuera un caso real-, es un paso natural conseguir los hashes de la imagen que configura nuestra evidencia.
 
-![insider](../assets/img/insider/9.png)
+![insider](https://github.com/Sokratica/sokratica/blob/master/assets/img/insider/9.png?raw=true)
 
 
 **9. Dentro de la ruta de archivos de Documentos, se cree que Karen estaba burlándose de un experto en computadoras a través de un script de bash. ¿De quién se estaba burlando Karen?** <a name="p9"></a>
 
 Esta pregunta ya está casi resuelta pues ya nos dan casi la dirección completo del fichero que hay que mirar. En este caso, dentro del único directorio dentro de Documentos, veremos 5 documentos y, donde está nuestra respuesta es en “firstscript_fixed”: la persona que estaba siendo molestada por Karen era “Young”.
 
-![insider](../assets/img/insider/10.png)
+![insider](https://github.com/Sokratica/sokratica/blob/master/assets/img/insider/10.png?raw=true)
 
 
 **10. Un usuario usó “su” para root a las 11:26 varias veces. ¿Quién fue?** <a name="p10"></a>
 
 Tratándose de un SO Linux y tratándose del comando “su” que se usa para cambiar de usuarios, es normal que donde tengamos que buscar la respuesta sea en el archivo “auth.log” que se encuentra en la ruta “var\log\”. Yo abrí el fichero en el Notepad++ y busqué por la hora que nos dan en la pregunta y allí encontré que hubo un cambio de usuario a “postgres”.
 
-![insider](../assets/img/insider/11.png)
+![insider](https://github.com/Sokratica/sokratica/blob/master/assets/img/insider/11.png?raw=true)
 
 
 **11. Basado en el historial de bash, ¿cuál es el directorio de trabajo actual?** <a name="p11"></a>
 
 Por último, en cuando al registro de comandos para cambiar de directorio, esta información la podremos encontrar en el fichero “bash_history”. Allí veremos que la ruta actual es: “/root/Documents/myfirsthack/“.
 
-![insider](../assets/img/insider/12.png)
+![insider](https://github.com/Sokratica/sokratica/blob/master/assets/img/insider/12.png?raw=true)
 
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
