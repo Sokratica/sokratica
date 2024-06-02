@@ -85,14 +85,14 @@ Revisando una [CheatSheet](https://blog.onfvp.com/post/volatility-cheatsheet/) d
 
 En el output podemos ver un proceso llamado “oneetx.exe” con PID 5896 (Indicador de proceso o Process Indicator) que encaja con nuestra respuesta.
 
-![redline](../assets/img/redline/1.png)
+![redline](https://github.com/Sokratica/sokratica/blob/master/assets/img/redline/1.png?raw=true)
 
 
 **2. ¿Cuál es el nombre del “proceso hijo” del proceso sospechoso?** <a name="p2"></a>
 
 Para conocer la lista de procesos que están registrados en el volcado de memoria que nos dan como evidencia, podemos usar el plugin “pslist” y allí veremos lo siguiente:
 
-![redline](../assets/img/redline/2.png)
+![redline](https://github.com/Sokratica/sokratica/blob/master/assets/img/redline/2.png?raw=true)
 
 Lo que aquí nos están diciendo es que el proceso con PID 5896 es el “proceso padre” de PID 7732 que inicia el proceso “rundll32.exe”. Así como se nos imprime por pantalla los resultados del comando, vemos que está el PID y el PPID. Este último es el “Parent Process Identifier”, es decir, el proceso que inicia el PID.
 
@@ -101,7 +101,7 @@ Lo que aquí nos están diciendo es que el proceso con PID 5896 es el “proceso
 
 Regresando al resultados del plugin de la pregunta 1, allí podemos ver una columna de “Protection” en la que se nos menciona que la protección activada en esa región de memoria es “page_execute_readwrite”:
 
-![redline](../assets/img/redline/3.png)
+![redline](https://github.com/Sokratica/sokratica/blob/master/assets/img/redline/3.png?raw=true)
 
 Según la documentación, este tipo de protección permite que en este caso el ejecutable tenga capacidades de ejecución, lectura y escritura. Esto está identificado como una posible vulnerabilidad ya que se está expuesto a que en el proceso que se esté corriendo se pueda inyectar código malicioso.
 
@@ -110,7 +110,7 @@ Según la documentación, este tipo de protección permite que en este caso el e
 
 Para buscar la respuesta a esta pregunta, extraje la lista de procesos que se ejecutaron en la máquina con el plugin “windows.pslist”. Una vez con los resultados en mano, lo que hice fue literal revisar a ojo los procesos corridos y tratar de identificar algún proceso de conexión a red. Explorando encontré un proceso llamado “tun2socks.exe” que es un aplicativo que enviar información a través de una VPN mediante socks proxies. Sin embargo, este no es el proceso que arranca la conexión por VPN, así que revisando el proceso padre del tun2socks Asun ejecutable llamado “Outline.exe”:
 
-![redline](../assets/img/redline/4.png)
+![redline](https://github.com/Sokratica/sokratica/blob/master/assets/img/redline/4.png?raw=true)
 
 
 **5. ¿Cuál es la dirección IP del atacante?** <a name="p5"></a>
@@ -121,18 +121,18 @@ Regresando al cheatsheet, encontré que hay un plugin que te da las direcciones 
 |:--------:|:----------:|:----:|:-:|
 |10.0.85.2|77.91.124.20|80|oneetx.exe|
 
-![redline](../assets/img/redline/5.png)
+![redline](https://github.com/Sokratica/sokratica/blob/master/assets/img/redline/5.png?raw=true)
 
 
 **6. Basado en los artefactos previos, ¿cuál es el nombre de la familia de malware?** <a name="p6"></a>
 
 Para responder esta pregunta lo que hice fue meter la IP que encontramos a Virustotal y me arrojó que se encontró actividad asociada a RedLine. Con esta información, lo que hice a continuación fue extraer strings que hubiera en el volcado de memoria y los pasé a un txt. Allí encontré algunas referencias al malware “RedLine Stealer”:
 
-![redline](../assets/img/redline/6.png)
+![redline](https://github.com/Sokratica/sokratica/blob/master/assets/img/redline/6.png?raw=true)
 
-![redline](../assets/img/redline/7.png)
+![redline](https://github.com/Sokratica/sokratica/blob/master/assets/img/redline/7.png?raw=true)
 
-![redline](../assets/img/redline/10.png)
+![redline](https://github.com/Sokratica/sokratica/blob/master/assets/img/redline/10.png?raw=true)
 
 
 **7. ¿Cuál es la URL completa del archivo PHP que visitó el atacante?** <a name="p7"></a>
@@ -143,7 +143,7 @@ Para responder a esta pregunta, hay que usar la misma información que extrajimo
 
 Usando los comandos “strings” y greo en una terminal de Linux obtenemos lo siguiente. Además, dado que ya sabemos a cuál IP se conectó la máquina víctima, ya obtenemos URL de recurso php descargado:
 
-![redline](../assets/img/redline/8.png)
+![redline](https://github.com/Sokratica/sokratica/blob/master/assets/img/redline/8.png?raw=true)
 
 
 **8. ¿Cuál es la ruta completa del ejecutable malicioso?** <a name="p8"></a>
@@ -152,7 +152,7 @@ Para esta última pregunta encontré que hay un plugin para obtener los ficheros
 
 ```[A-Za-z]:\\(?:[^\\\n]+\\)*oneetx*\.exe```
 
-![redline](../assets/img/redline/9.png)
+![redline](https://github.com/Sokratica/sokratica/blob/master/assets/img/redline/9.png?raw=true)
 
 Con esto tenemos nuestra última respuesta, la ruta completa del exe malicioso es:
 
