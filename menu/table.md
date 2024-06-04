@@ -10,7 +10,8 @@ Esta es la lista de máquinas/laboratorios/ejercicios de Blue Team que he resuel
 
 |Nombre|Etiquetas|Categoría|Dificultad|
 |:----:|:-------:|:-------:|:--------:|
-[RedLine](https://sokratica.github.io/sokratica/redilneCD)|Memory Forensic, Volatility, RedLine, Network Intrusion Detection System (NIDS), T1055|Endpoint Forensicss|Fácil|
+|[Ramnit](https://sokratica.github.io/sokratica/ramnitCD)|Memory Forensics, Volatility|Endpoint Forensics|Fácil|
+|[RedLine](https://sokratica.github.io/sokratica/redilneCD)|Memory Forensic, Volatility, RedLine, Network Intrusion Detection System (NIDS), T1055|Endpoint Forensics|Fácil|
 |[Insider](https://sokratica.github.io/sokratica/insiderCD)|Linux, FTK Imager, Disk Forensic, T1496, T1059, T1005, T1003|Endpoint Forensics|Fácil|
 |[The Crime](https://sokratica.github.io/sokratica/CDTheCrime)|Android, ALEAPP, SQLite Browser, Autopsy Forensics|Endpoint Forensics|Fácil|
 |[getpdf](https://sokratica.github.io/sokratica/WU_getpdf_cyberd)|pdf, macro, cve, exploit|Análisis de Malware|Media|
