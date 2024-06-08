@@ -10,6 +10,7 @@ Esta es la lista de máquinas/laboratorios/ejercicios de Blue Team que he resuel
 
 |Nombre|Etiquetas|Categoría|Dificultad|
 |:----:|:-------:|:-------:|:--------:|
+|Jailbroken|Disk Forensics, iOS, iPad, iLEAPP, SQLite Browser, Mac, Autopsy, Jailbroke, T1555|Endpoint Forensics|Media|
 |[Ramnit](https://sokratica.github.io/sokratica/ramnitCD)|Memory Forensics, Volatility|Endpoint Forensics|Fácil|
 |[RedLine](https://sokratica.github.io/sokratica/redilneCD)|Memory Forensic, Volatility, RedLine, Network Intrusion Detection System (NIDS), T1055|Endpoint Forensics|Fácil|
 |[Insider](https://sokratica.github.io/sokratica/insiderCD)|Linux, FTK Imager, Disk Forensic, T1496, T1059, T1005, T1003|Endpoint Forensics|Fácil|
