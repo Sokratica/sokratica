@@ -24,6 +24,6 @@ title:		           'Sokratica'
 description:	       'Análisis de malware - Osint - DFIR - Writeups y Herramientas '
 author:              'I.'
 
-RSS 2.0 can be used instead of Atom by uncommenting following two lines
+#RSS 2.0 can be used instead of Atom by uncommenting following two lines
 feed:
   path: rss-feed.xml
