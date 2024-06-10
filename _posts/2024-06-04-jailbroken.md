@@ -5,7 +5,7 @@ title : Writeup | CyberDefenders | Jailbroken
 categories: [Writeups CyberDefenders]
 tags: Writeups, Writeups Español, Cyberdefenders, Jailbroken, Endpoint Forensics
 excerpt: "Este es una guía de cómo resolver, paso a paso, el reto Jailbroken de la plataforma Cyberdefenders.org"
-#image: x.png
+image: jailbroken_portada.png
 ---
 
 Esta es una guía de cómo resolver, paso a paso, el reto Jailbroken de la plataforma Cyberdefenders.org
@@ -97,14 +97,14 @@ El primer paso que voy a hacer es procesar nuestra evidencia con las herramienta
 
 Usando la herramienta iLLEAPP, y siendo afortunados que esta información se encuentra fácil, la versión del sistema operativo, como se puede ver en el “html” que devuelve la herramienta, es la “9.3.5”. Esta información la encuentras en la sección de “Report Home” y, luego, en “Device Details”.
 
-![jailbrake](../assets/img/jailbroken/1.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/1.png?raw=true)
 
 
 **2. ¿Quién está usando el iPad? Incluye su nombre y apellido.** <a name="p2"></a>
 
 En la misma sección que la pregunta anterior podemos ver el nombre del dispositivo, sin embargo, eso no es lo que estamos buscando. En la sección de “Account Data” vemos una columna de “Username” y esa en nuestra respuesta: “Tim Apple”.
 
-![jailbrake](../assets/img/jailbroken/2.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/2.png?raw=true)
 
 
 **3. ¿Cuándo fue la última vez que este dispositivo estuvo cargado al 100%?** <a name="p3"></a>
@@ -113,7 +113,7 @@ Para esta pregunta tardé bastante tiempo porque estaba haciendo mal las cosas. 
 
 En el browser del iLEAPP hay una sección llamada “Strings - SQLite Journal & WAL”. Allí empecé a buscar referencias a alguna base de datos de logs de la batería del dispositivo y encontré lo que enseñó en la siguiente imagen:
 
-![jailbrake](../assets/img/jailbroken/3.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/3.png?raw=true)
 
 Ese fichero es el que estamos buscando pero con la diferencia de que, con la extensión “tal” parece que se necesitan otros ficheros para poder leer la base de datos; de lo contrario con el SQLite Browser dará error para leer el archivo. Esto es así porque buscar ese archivo en el output parseado del iLEAPP no ofrece los ficheros necesarios para poder leer la base de datos. Entonces, lo que hay que hacer es buscar ese fichero en la evidencia original, el cual se encuentra en la siguiente ruta:
 
@@ -123,11 +123,11 @@ Ese fichero es el que estamos buscando pero con la diferencia de que, con la ext
 
 Y allí encontrarás los siguiente ficheros, desde el SQLite Browser importa el que se llama “CurrentPowerlog.PLSQL” desde esa carpeta para que se parsee la información de manera correcta:
 
-![jailbrake](../assets/img/jailbroken/4.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/4.png?raw=true)
 
 Una vez importada la base de datos, hay que leer la base que se llama “PLBatteryAgent_EventBackward_Battery” y encontrar el evento con ID 1867:
 
-[jailbroken](../assets/img/jailbroken/5.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/5.png?raw=true)
 
 Hay que convertir en timestemp a un formato legible. Yo lo hice desde la web de
 
@@ -137,7 +137,7 @@ epochconverter.com
 
 Desde allí convertirnos el formato, sin poner en la sección correspondiente los decimales y allí tenemos nuestra respuesta:
 
-[jailbroken](../assets/img/jailbroken/6.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/6.png?raw=true)
 
 
 **4. ¿Cuál es el título de la página web que se vio más veces?** <a name="p4"></a>
@@ -150,7 +150,7 @@ ruta_al_parse\temp\Jailbroken\private\var\mobile\Containers\Data\Application\FB1
 
 Allí puedes ver que el término de búsqueda al que más se accedió fue “Kirby with legs”:
 
-[jailbroken](../assets/img/jailbroken/7.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/7.png?raw=true)
 
 
 **5. ¿Cuál es el título del primer podcast que se descargó?** <a name="p5"></a>
@@ -163,51 +163,52 @@ private\var\mobile\Media\Podcast
 
 Allí encontré varios archivos. Traté de leer la información asociada a estos ficheros y me di cuenta que la información sobre los podcasts descargados se encuentra en los ficheros que no tienen extensión. Sólo abrí esos ficheros desde le navegador (arrastrándolos) y allí encontré la respuesta. El fichero asociado a nuestra respuesta es el “1174163024052164360”:
 
-[jailbroken](../assets/img/jailbroken/8.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/8.png?raw=true)
 
 
 **6. ¿Cuál es el nombre de la red WiFi a la que se conectó este dispositivo?** <a name="p6"></a>
 
 Regresamos al iLEAPP, allí verás una sección de “WiFi Known Networks” y así de simple podrás ver el nombre de la red:
 
-[jailbroken](../assets/img/jailbroken/9.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/9.png?raw=true)
 
 
 **7. ¿Cuál es el nombre de la piel/esquema de color usado para el emulador de juegos? Debe ser un nombre de archivo.** <a name="p7"></a>
 
 Una vez sabiendo que el emulador que estaba usando en el dispositivo se llama “GBA4iOS”, seguí explorando las carpetas de nuestra evidencia y encontré una llamada “Applications” y allí hay una dedicada a este emulador. Allí encontré el nombre de dos skins y nuestra respuesta es la “Default.gbaskin”:
 
-[jailbroken](../assets/img/jailbroken/10.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/10.png?raw=true)
 
 
 **8. ¿Cuánto tiempo estuvo ejecutándose la aplicación de Noticias en segundo plano?** <a name="p8"></a>
 
 Regresando a las bases de datos de journal “CurrentPowerlog”, encontramos una base de datos que se llama “PLAppTimeService_Aggregate_AppRunTime”. Si filtramos en la sección de “BundeID” por “news” veremos nuestra respuesta:
 
-[jailbroken](../assets/img/jailbroken/11.png)
+
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/11.png?raw=true)
 
 
 **9. ¿Cuál fue la primera aplicación descargada desde la AppStore?** <a name="p9"></a>
 
 En la sección de “Installed Apps” en el reporte de iLLEAPP, veremos que la primera aplicación instalada fue “Cookie Run”.
 
-[jailbroken](../assets/img/jailbroken/12.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/12.png?raw=true)
 
 
 **10. ¿Qué aplicación se utilizó para hacer jailbreak a este dispositivo?** <a name="p10"></a>
 
 Regresando al reporte de iLEAPP, busqué en todas las aplicaciones instaladas en el dispositivo (sección “Application State DB”) esperando encontrar una que me pareciera extraña y encontré una que no me sonaba el nombre: Phoenix. Esto lo pudo conformar simplemente googleando “phoenix ipad jailbrake”:
 
-[jailbroken](../assets/img/jailbroken/13.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/13.png?raw=true)
 
-[jailbroken](../assets/img/jailbroken/14.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/14.png?raw=true)
 
 
 **11. ¿Cuántas aplicaciones fueron instaladas desde la AppStore?** <a name="p11"></a>
 
 Esta respuesta es sencilla pues en el mismo reporte, en la sección de “Apps - iTunes Metadata” encontramos sólo dos aplicaciones instaladas:
 
-[jailbroken](../assets/img/jailbroken/15.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/15.png?raw=true)
 
 
 **12. ¿Cuántos estados guardados se hicieron para el juego del emulador que se obtuvo más recientemente?** <a name="p12"></a>
@@ -225,29 +226,29 @@ Podemos ver que hay dos juegos instaladas: “Pokémon” y “Zelda”. Hay una
 
 Retomando la respuesta de la pregunta 5, uno de los dos podcasts descargados era de Duolingo que es en idioma español, así que nuestra respuesta es: spanish.
 
-[jailbroken](../assets/img/jailbroken/16.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/16.png?raw=true)
 
 
 **14. El usuario estaba leyendo un libro en la vida real pero usó su iPad para registrar la página en la que se quedó. ¿Cuál era el número?** <a name="p14"></a>
 
 Lo más sensato era buscar en la aplicación de notas nativa del dispositivo que podemos encontrar en la siguiente ruta; pero les adelanto que no hay nada interesante allí:
 
-[jailbroken](../assets/img/jailbroken/17.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/17.png?raw=true)
 
 Lo siguiente que se me vino a la cabeza fue que estuviera usando fotos para guardar la página en la que paró de leer. La forma más rápida de acceder a las imágenes es con el Autopsy, pero en imágenes tampoco veremos nada. Resulta que nuestra respuesta está en un vídeo nombrado “IMG_0008.MOV” y es la página: 85.
 
-[jailbroken](../assets/img/jailbroken/18.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/18.png?raw=true)
 
 
 **15. Si me encontraste, ¿qué debería comprar?** <a name="p15"></a>
 
 Esta respuesta es difícil. Lo primero que hice fue abrir la sección de “Databases” en el Autopsy y buscar una base de datos que resultara relevante mediante palabras clave y encontré una que se llama “NoteStore.sqlite”.
 
-[jailbroken](../assets/img/jailbroken/19.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/19.png?raw=true)
 
 La abrí desde el Browser pero no vi nada relevante allí. Así que, una vez que la extraje a una carpeta de evidencia, usé el comando strings para buscar la palabra “buy” y allí encontramos nuestra respuesta: Crash Bandicoot Nitro-Fueled Racing
 
-[jailbroken](../assets/img/jailbroken/20.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/20.png?raw=true)
 
 
 **16. Había una aplicación de SMS en el dock de este dispositivo.** <a name="p16"></a>
@@ -260,14 +261,14 @@ private\var\mobile\Library\SpringBoard
 
 Allí encontramos un plist llamado “IconState” el cual es bastante sugerente para lo que estamos buscando:
 
-[jailbroken](../assets/img/jailbroken/21.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/21.png?raw=true)
 
 
 **17. Se hizo un recordatorio para conseguir algo, ¿qué fue?** <a name="p17"></a>
 
 En la aplicación de Calendario hay bases de datos. Hay que importarlas como el caso de la base de datos de información de la batería. Una vez en el Browser hay que abrir “CalendarItem” y allí veremos nuestra respuesta:
 
-[jailbroken](../assets/img/jailbroken/22.png)
+![jailbroken](https://github.com/Sokratica/sokratica/blob/master/assets/img/jailbroken/22.png?raw=true)
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
