@@ -11,7 +11,7 @@ Esta es la lista de máquinas/laboratorios/ejercicios de Blue Team que he resuel
 
 |Nombre|Categoría|Sistema Operativo|Creadores|Descripción|
 |:----:|:-------:|:---------------:|:-------:|:---------:|
-|WinHex|Forense digital|Windows|X-Ways|Sirve para recuperar archivos eliminados aún disposibles en la unidad de almacenamiento|
+|[WinHex](https://sokratica.github.io/sokratica/winhex)|Forense digital|Windows|X-Ways|Sirve para recuperar archivos eliminados aún disposibles en la unidad de almacenamiento|
 
 
 
