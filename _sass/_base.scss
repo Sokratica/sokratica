@@ -1,7 +1,6 @@
 /*
   Base
 */
-
 body {
   font-family: $serif-font-family;
   font-size: 18px;
@@ -19,8 +18,9 @@ body {
   }
 }
 
-h1{
+h1 {
   font-size: 2rem;
+  color: whitesmoke /* Añadido para cambiar el color a rojo */
 }
 
 h1 a {
@@ -30,6 +30,23 @@ h1 a {
 h1, h2, h3, h4, h5, h6 {
   font-family: $sans-serif-font-family;
   color: $dark-gray-color;
+}
+
+/* Asegúrate de que h1 mantenga el color rojo */
+h1 {
+  color: whitesmoke; /* Añadido para asegurar que h1 mantenga el color rojo */
+}
+
+h2 {
+  color: blue; /* Títulos con ## serán azules */
+}
+
+strong, b {
+  color: orange;
+}
+
+strong u, b u {
+  color: pink;
 }
 
 a {
