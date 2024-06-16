@@ -21,7 +21,7 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           'Sokratica'
-description:	       'Análisis de malware - Osint - DFIR - Writeups y Herramientas '
+description:	       'Análisis de malware - DFIR - Writeups - Herramientas '
 author:              'I.'
 
 #RSS 2.0 can be used instead of Atom by uncommenting following two lines

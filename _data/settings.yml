@@ -14,7 +14,7 @@ menu:
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
 #- {icon: 'github',     link: 'https://www.github.com/lenpaul'}
-#- {icon: 'twitter',    link: 'https://twitter.com/Ulysezzz'}
+- {icon: 'twitter',    link: 'https://x.com/Ulysezzz'}
 #- {icon: 'linkedin',   link: 'https://linkedin.com/in/msc-ulises-a-39141a217'}
 #- {icon: 'envelope',   link: 'mailto:l.nguyen.paul@gmail.com'}
 #- {icon: 'rss-square', link: '/feed.xml'}
@@ -27,6 +27,6 @@ pagination:
 
 # sharing_button_prompt: 'Feel free to share!'
 
-related_posts: 'You may also enjoy:'
+related_posts: 'También te podría gustar:'
 
-post_date_prefix: 'Written on'
+post_date_prefix: 'Escrito el'
