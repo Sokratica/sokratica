@@ -22,6 +22,7 @@ Esta es la lista de máquinas/laboratorios/ejercicios de Blue Team que he resuel
 
 |Nombre|Etiquetas|Categoría|Dificultad|
 |:----:|:-------:|:-------:|:--------:|
+|[MrGamer](https://sokratica.github.io/sokratica/MrGamer)|Disk Forensic, FTK Imager, SQLite Browser, CyberChef, T1059|Endpoint Forensics|Media|
 |[LGDroid](https://sokratica.github.io/sokratica/LGDroid)|Disk Forensic, Android, SQLite Browser, T1426, T1420, T1552, T1600, T1512, T1550.002, T1601|Endpoint Forensics|Media|
 |[Jailbroken](https://sokratica.github.io/sokratica/jailbroken)|Disk Forensics, iOS, iPad, iLEAPP, SQLite Browser, Mac, Autopsy, Jailbroke, T1555|Endpoint Forensics|Media|
 |[The Crime](https://sokratica.github.io/sokratica/CDTheCrime)|Android, ALEAPP, SQLite Browser, Autopsy Forensics|Endpoint Forensics|Fácil|
