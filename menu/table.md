@@ -21,7 +21,7 @@ Esta es la lista de máquinas/laboratorios/ejercicios de Blue Team que he resuel
 
 |Nombre|Etiquetas|Categoría|Dificultad|
 |:----:|:-------:|:-------:|:--------:|
-|Red Stealer|Redline, ThreatFox, VirusTotal, MalwareBazzar, Whois|Threat Intel|Fácil|
+|[Red Stealer](https://sokratica.github.io/sokratica/redstealer)|Redline, ThreatFox, VirusTotal, MalwareBazzar, Whois|Threat Intel|Fácil|
 
 ## Endpoint Forensics
 
