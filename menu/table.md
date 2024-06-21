@@ -20,8 +20,9 @@ Esta es la lista de máquinas/laboratorios/ejercicios de Blue Team que he resuel
 
 |Nombre|Etiquetas|Categoría|Dificultad|
 |:----:|:-------:|:-------:|:--------:|
-|[Red Stealer](https://sokratica.github.io/sokratica/redstealer)|Redline, ThreatFox, VirusTotal, MalwareBazzar, Whois|Threat Intel|Fácil|
-|[3CX Supply Chain](https://sokratica.github.io/sokratica/3cx_supply_chain)|Malware Analysis, APTs, Virustotal|Threat Intel|Fácil|
+|[GrabThePhiser](https://sokratica.github.io/sokratica/grabthephisher)|Phishing, OSINT, T1567, T1016, T1566.003|Milann Shrestha|Fácil|
+|[Red Stealer](https://sokratica.github.io/sokratica/redstealer) (próximamente)|Redline, ThreatFox, VirusTotal, MalwareBazzar, Whois|Threat Intel|Fácil|
+|[3CX Supply Chain](https://sokratica.github.io/sokratica/3cx_supply_chain) (próximamente)|Malware Analysis, APTs, Virustotal|Threat Intel|Fácil|
 
 ## Endpoint Forensics
 
