@@ -25,7 +25,7 @@ Tags: Writeups, Writeups Español, Cyberdefenders, 3CX Sypply Chain
     2.6 [Pregunta 6](#p6)\\
     2.7 [Pregunta 7](#p7)\\
     2.8 [Pregunta 8](#p8)\\
-    2.9 [Pregunta 9](#p9)\\
+    2.9 [Pregunta 9](#p9)
 3. [Preguntas y respuestas](#pyr)
 
 
