@@ -55,6 +55,13 @@ Formas parte del equipo de Inteligencia de Amenazas en el SOC (Centro de Operaci
 
 Tu tarea es investigar este ejecutable analizando su hash. El objetivo es recopilar y analizar datos que sean beneficiosos para otros miembros del SOC, incluyendo el equipo de Respuesta a Incidentes, para responder de manera eficiente a este comportamiento sospechoso.
 
+|Herramientas recomendadas|
+|:-----------------------:|
+|VirusTotal|
+|Threatfox|
+|Malwarebazaar|
+|Whois|
+
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 # Writeup <a name="wu"></a>
