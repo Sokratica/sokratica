@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Laboratorios Resuletos
+title: Laboratorios Resueltos
 permalink: /table
 ---
 
@@ -17,6 +17,12 @@ Esta es la lista de máquinas/laboratorios/ejercicios de Blue Team que he resuel
 
 # CyberDefenders
 
+## Inteligencia de Amenazas
+
+|Nombre|Etiquetas|Categoría|Dificultad|
+|:----:|:-------:|:-------:|:--------:|
+|Red Stealer|Redline, ThreatFox, VirusTotal, MalwareBazzar, Whois|Threat Intel|Fácil|
+
 ## Endpoint Forensics
 
 |Nombre|Etiquetas|Categoría|Dificultad|
@@ -27,7 +33,7 @@ Esta es la lista de máquinas/laboratorios/ejercicios de Blue Team que he resuel
 |[Eli](https://sokratica.github.io/sokratica/WU_Eli_cyberd)|Chromebook, Gmail, Chromeos, Takeout, CLEAPP|Endpoint Forensics|Media|
 
 
-## Dispositivos móviles
+## Dispositivos Móviles
 
 |Nombre|Etiquetas|Categoría|Dificultad|
 |:----:|:-------:|:-------:|:--------:|
@@ -38,7 +44,7 @@ Esta es la lista de máquinas/laboratorios/ejercicios de Blue Team que he resuel
 |[The Crime](https://sokratica.github.io/sokratica/CDTheCrime)|Android, ALEAPP, SQLite Browser, Autopsy Forensics|Endpoint Forensics|Fácil|
 
 
-## Análisis de malware
+## Análisis de Malware
 
 |Nombre|Etiquetas|Categoría|Dificultad|
 |:----:|:-------:|:-------:|:--------:|
