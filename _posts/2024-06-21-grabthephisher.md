@@ -96,13 +96,13 @@ Un ejemplo común es establecer una relación de confianza con un objetivo a tra
 
 Si abrimos el fichero “index[.]html” veremos 3 opciones para conectar una wallet de criptomonedas. Por otra parte, en los directorios de la muestra del kit the phishing, hay una carpeta que se llama como una de las wallets
 
-![grabthephisher](https://github.com/Sokratica/sokratica/blob/master/assets/img/grabthephishser/1.png?raw=true)
+![grabthephisher](https://github.com/Sokratica/sokratica/blob/master/assets/img/grabthephisher/1.png?raw=true)
 
 **2. ¿Cuál es el nombre del archivo que contiene el código del kit de phishing?** <a name="p2"></a>
 
 Si ingresamos en la carpeta de “metamask”, veremos otro fichero “index[.]html” y un “metamask[.]php”. En este último es donde encontraremos el código para loggearse en la supuesta web:
 
-![grabthephisher](https://github.com/Sokratica/sokratica/blob/master/assets/img/grabthephishser/2.png?raw=true)
+![grabthephisher](https://github.com/Sokratica/sokratica/blob/master/assets/img/grabthephisher/2.png?raw=true)
 
 
 **3. ¿En qué lenguaje fue escrito el kit?** <a name="p3"></a>
@@ -114,25 +114,25 @@ Esta respuesta ya la tenemos en el lenguaje del fichero “metamask” de la pre
 
 Dentro de este fichero, que podemos leer dese un editor de código o desde un navegador, vemos una llamada “request” para obtener ficheros a través de una API llamada “sypex geo”:
 
-![grabthephisher](https://github.com/Sokratica/sokratica/blob/master/assets/img/grabthephishser/3.png?raw=true)
+![grabthephisher](https://github.com/Sokratica/sokratica/blob/master/assets/img/grabthephisher/3.png?raw=true)
 
 
 **5. ¿Cuántas frases semilla se han recopilado hasta ahora?** <a name="p5"></a>
 
 La respuesta es 3 y están almacenadas en el fichero “log/log.txt”. Esto lo podemos descubrir si leemos el flujo del programa malicioso_
 
-![grabthephisher](https://github.com/Sokratica/sokratica/blob/master/assets/img/grabthephishser/4.png?raw=true)
+![grabthephisher](https://github.com/Sokratica/sokratica/blob/master/assets/img/grabthephisher/4.png?raw=true)
 
 
 **6. Escribe la frase semilla del incidente de phishing más reciente.** <a name="p6"></a>
 
 Revisando el código, en la parte final de éste hay una función de “append”, el cual agregar texto hasta el final de un fichero. 
 
-![grabthephisher](https://github.com/Sokratica/sokratica/blob/master/assets/img/grabthephishser/5.png?raw=true)
+![grabthephisher](https://github.com/Sokratica/sokratica/blob/master/assets/img/grabthephisher/5.png?raw=true)
 
 Con esto en mente, lo natural sería que la última línea sea la frase semilla más reciente robada:
 
-![grabthephisher](https://github.com/Sokratica/sokratica/blob/master/assets/img/grabthephishser/6.png?raw=true)
+![grabthephisher](https://github.com/Sokratica/sokratica/blob/master/assets/img/grabthephisher/6.png?raw=true)
 
 
 **7. ¿Qué medio se ha utilizado para el volcado de credenciales?** <a name="p7"></a>
@@ -144,7 +144,7 @@ Como se puede ver en el código, el mensaje con la frase semilla se envía a tra
 
 Allí mismo podemos ver el token del canal que nos pide la pregunta:
 
-![grabthephisher](https://github.com/Sokratica/sokratica/blob/master/assets/img/grabthephishser/7.png?raw=true)
+![grabthephisher](https://github.com/Sokratica/sokratica/blob/master/assets/img/grabthephisher/7.png?raw=true)
 
 
 **9. ¿Cuál es el ID de chat del canal del pescador?** <a name="p9"></a>
@@ -156,7 +156,7 @@ La respuesta la puedes encontrar en la sección de “$id” en la imagen anteri
 
 En el fichero de “metamask[.]php”, vemos que el cibercriminal deja un mensaje a la víctima firmado por alguien que se hace llamar:
 
-![grabthephisher](https://github.com/Sokratica/sokratica/blob/master/assets/img/grabthephishser/8.png?raw=true)
+![grabthephisher](https://github.com/Sokratica/sokratica/blob/master/assets/img/grabthephisher/8.png?raw=true)
 
 
 **11. ¿Cuál es el nombre completo del actor de phishing?** <a name="p11"></a>
@@ -173,7 +173,7 @@ ID=5442785564
 
 Así, obtenemos lo siguiente:
 
-![grabthephisher](https://github.com/Sokratica/sokratica/blob/master/assets/img/grabthephishser/9.png?raw=true)
+![grabthephisher](https://github.com/Sokratica/sokratica/blob/master/assets/img/grabthephisher/9.png?raw=true)
 
 
 **12. ¿Cuál es el nombre de usuario del actor de phishing?**  <a name="p12"></a>
